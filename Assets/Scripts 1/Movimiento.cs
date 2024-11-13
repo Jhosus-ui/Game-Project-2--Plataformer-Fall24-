@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;             // Referencia al Rigidbody2D del personaje
     private bool isGrounded = false;    // Indica si el personaje está en el suelo
     private bool canDoubleJump = false; // Indica si el personaje puede hacer un doble salto
-    private bool isTouchingWall = false;
+ 
 
     private void Start()
     {
@@ -20,15 +20,7 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        //movimiento contra muros
-
-        if (isTouchingWall)
-        {
-            moveInput = 0;
-        }
-
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
+        
 
 
         // Saltar cuando el personaje está en el suelo o puede hacer doble salto
@@ -60,14 +52,6 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
 
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            isTouchingWall = true;
-        }
-        else if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
 
     }
 
@@ -79,13 +63,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
 
-        if (collision.gameObject.CompareTag("Wall"))
-        {
-            isTouchingWall = false;
-        }
-        else if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded= false;
-        }
+      
+        
     }
 }
