@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeguirJugadorSuelo : MonoBehaviour
+public class SeguirJugadorAire : MonoBehaviour
 {
     public float radioBusqueda;
     public LayerMask capaJugador;
@@ -14,9 +14,6 @@ public class SeguirJugadorSuelo : MonoBehaviour
     public EstadosMovimiento estadoActual;
 
     public bool mirandoDerecha;
-
-    public Rigidbody2D rb2D;
-    public Animator animator;
 
     public enum EstadosMovimiento
     {
@@ -59,9 +56,6 @@ public class SeguirJugadorSuelo : MonoBehaviour
 
     private void EstadoSiguiendo()
     {
-
-        animator.SetBool("Corriendo", true);
-
         if (transformJugador == null)
         {
             estadoActual = EstadosMovimiento.Volviendo;
@@ -69,14 +63,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
         }
 
         // Mover hacia el jugador
-        if (transform.position.x < transformJugador.position.x)
-        {
-            rb2D.velocity = new Vector2(velocidadMovimiento, rb2D.velocity.y);
-        }
-        else
-        {
-            rb2D.velocity = new Vector2(-velocidadMovimiento, rb2D.velocity.y);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, transformJugador.position, velocidadMovimiento * Time.deltaTime);
 
         GirarAObjetivo(transformJugador.position);
 
@@ -92,25 +79,13 @@ public class SeguirJugadorSuelo : MonoBehaviour
     private void EstadoVolviendo()
     {
         // Mover hacia el punto inicial
-        if (transform.position.x < puntoInicial.x)
-        {
-            rb2D.velocity = new Vector2(velocidadMovimiento, rb2D.velocity.y);
-        }
-        else
-        {
-            rb2D.velocity = new Vector2(-velocidadMovimiento, rb2D.velocity.y);
-        }
+        transform.position = Vector2.MoveTowards(transform.position, puntoInicial, velocidadMovimiento * Time.deltaTime);
 
         GirarAObjetivo(puntoInicial);
 
         // Cambiar estado a Esperando si ha regresado al punto inicial
         if (Vector2.Distance(transform.position, puntoInicial) < 0.1f)
         {
-
-            rb2D.velocity = Vector2.zero;
-
-            animator.SetBool("Corriendo", false);
-
             estadoActual = EstadosMovimiento.Esperando;
         }
     }
@@ -120,9 +95,9 @@ public class SeguirJugadorSuelo : MonoBehaviour
         if (objetivo.x > transform.position.x && !mirandoDerecha)
         {
             Girar();
-        }
-
-        else if (objetivo.x < transform.position.x && mirandoDerecha)
+        } 
+        
+        else if (objetivo.x <  transform.position.x && mirandoDerecha)
         {
             Girar();
         }

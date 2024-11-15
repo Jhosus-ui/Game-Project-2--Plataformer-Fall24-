@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     public float fallMultiplier = 2.5f; // Multiplicador de gravedad para caída rápida
     public float coyoteTime = 0.2f;     // Tiempo de gracia para un único salto cuando cae
 
+    private const float movementThreshold = 0.1f; // Umbral para ignorar valores residuales
+
     private Rigidbody2D rb;             // Referencia al Rigidbody2D del personaje
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -42,9 +44,22 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
         }
 
+        // Redondeo de las velocidades para ignorar valores pequeños
+        float xVelocity = Mathf.Abs(rb.velocity.x);
+        if (xVelocity < movementThreshold)
+        {
+            xVelocity = 0;
+        }
+
+        float yVelocity = rb.velocity.y;
+        if (Mathf.Abs(yVelocity) < movementThreshold)
+        {
+            yVelocity = 0;
+        }
+
         // Actualizar animación
-        animator.SetFloat("XVelocity", Mathf.Abs(rb.velocity.x));
-        animator.SetFloat("YVelocity", rb.velocity.y);
+        animator.SetFloat("XVelocity", xVelocity);
+        animator.SetFloat("YVelocity", yVelocity);
 
         // Voltear el personaje según la dirección de movimiento
         if (moveInput > 0)
