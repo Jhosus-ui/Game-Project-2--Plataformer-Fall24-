@@ -15,6 +15,8 @@ public class SeguirJugadorAire : MonoBehaviour
 
     public bool mirandoDerecha;
 
+    private Enemigo enemigo; // Referencia al script Enemigo
+
     public enum EstadosMovimiento
     {
         Esperando,
@@ -25,10 +27,19 @@ public class SeguirJugadorAire : MonoBehaviour
     private void Start()
     {
         puntoInicial = transform.position;
+        enemigo = GetComponent<Enemigo>(); // Obtener el componente Enemigo
     }
 
     private void Update()
     {
+        // Detener movimiento si la vida es menor o igual a 0
+        if (enemigo.Vida <= 0) // Accede a la propiedad o método Vida en el script Enemigo
+        {
+            estadoActual = EstadosMovimiento.Esperando; // Cambiar estado a Esperando
+            return; // Detener ejecución de Update
+        }
+
+        // Lógica del estado actual
         switch (estadoActual)
         {
             case EstadosMovimiento.Esperando:
@@ -95,27 +106,18 @@ public class SeguirJugadorAire : MonoBehaviour
         if (objetivo.x > transform.position.x && !mirandoDerecha)
         {
             Girar();
-        } 
-        
-        else if (objetivo.x <  transform.position.x && mirandoDerecha)
+        }
+        else if (objetivo.x < transform.position.x && mirandoDerecha)
         {
             Girar();
         }
     }
-
-
 
     private void Girar()
     {
         mirandoDerecha = !mirandoDerecha;
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
-
-
-
-
-
-
 
     private void OnDrawGizmos()
     {

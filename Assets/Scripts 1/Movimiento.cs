@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;             // Referencia al Rigidbody2D del personaje
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private Combat combat;              // Referencia al script Combat
 
     private bool isGrounded = false;    // Indica si el personaje está en el suelo
     private bool hasJumpedFromGround = false; // Indica si el personaje ha hecho un salto inicial desde el suelo
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        combat = GetComponent<Combat>(); // Obtener referencia al script Combat
     }
 
     private void Update()
@@ -107,6 +109,9 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
+
+        // Actualizar estado de salto en Combat
+        combat?.SetIsJumping(!isGrounded);
     }
 
     private void Jump()

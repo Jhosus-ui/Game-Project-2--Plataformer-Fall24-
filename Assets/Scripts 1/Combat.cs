@@ -4,14 +4,17 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     [SerializeField] private Transform controladorGolpe;
-    [SerializeField] private float radioGolpe = 0.5f;
-    [SerializeField] private float danoGolpe = 10f;
-    [SerializeField] private float tiempoDeAtaque = 0.5f;
+    [SerializeField] private float radioGolpe;
+    [SerializeField] private float danoGolpe;
+    [SerializeField] private float tiempoDeAtaque;
 
     private float tiempoSiguienteAtaque;
     private Animator animator;
     private SpriteRenderer spriteRenderer; // Para verificar la dirección del personaje
     private Vector3 offsetInicial; // Guarda la posición inicial del controladorGolpe relativa al jugador
+
+    // Variable para verificar si el personaje está saltando
+    private bool isJumping = false;
 
     private void Start()
     {
@@ -32,6 +35,12 @@ public class Combat : MonoBehaviour
         controladorGolpe.localPosition = spriteRenderer.flipX
             ? new Vector3(-offsetInicial.x, offsetInicial.y, offsetInicial.z) // A la izquierda
             : offsetInicial; // A la derecha
+
+        // Verificar si está saltando, si está saltando no se permite atacar
+        if (isJumping)
+        {
+            return; // No hacer nada si está saltando
+        }
 
         // Ejecutar ataque si el cooldown permite
         if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
@@ -58,6 +67,12 @@ public class Combat : MonoBehaviour
                 }
             }
         }
+    }
+
+    // Método para actualizar el estado de saltar
+    public void SetIsJumping(bool jumpingState)
+    {
+        isJumping = jumpingState;
     }
 
     private void OnDrawGizmos()
