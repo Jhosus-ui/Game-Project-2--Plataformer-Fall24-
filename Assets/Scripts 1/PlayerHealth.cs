@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
 
         vidaActual -= dano;
 
-        // Mostrar el daño recibido (opcional)
         Debug.Log("Jugador recibió daño. Vida restante: " + vidaActual);
 
         if (vidaActual <= 0)
@@ -39,25 +38,27 @@ public class PlayerHealth : MonoBehaviour
         estaMuerto = true;
         animator.SetTrigger("Muerte"); // Activar la animación de muerte
 
-        // Llamar a PlayerMovement para desactivar el movimiento
         if (playerMovement != null)
         {
-            playerMovement.ActivarMuerte();
+            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
         }
 
-        // Invocar el Game Over después de un tiempo
-        Invoke(nameof(GameOver), tiempoGameOver);
+        Invoke(nameof(GameOver), tiempoGameOver); // Invocar Game Over después de un tiempo
     }
 
     private void GameOver()
     {
         Debug.Log("Game Over");
-        // Aquí puedes implementar la lógica para reiniciar la escena, cargar una pantalla de Game Over, etc.
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Ejemplo: Cargar la escena inicial
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Cargar escena inicial
+    }
+
+    public bool IsDead()
+    {
+        return estaMuerto; // Retorna el estado de muerte
     }
 
     public float GetVidaActual()
     {
-        return vidaActual; // Retorna la vida actual (por ejemplo, para mostrar en una UI)
+        return vidaActual; // Retorna la vida actual
     }
 }

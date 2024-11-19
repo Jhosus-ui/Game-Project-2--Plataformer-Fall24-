@@ -13,8 +13,9 @@ public class Combat : MonoBehaviour
     private SpriteRenderer spriteRenderer; // Para verificar la dirección del personaje
     private Vector3 offsetInicial; // Guarda la posición inicial del controladorGolpe relativa al jugador
 
-    // Variable para verificar si el personaje está saltando
-    private bool isJumping = false;
+    // Variables de estado
+    private bool isJumping = false; // Verifica si el personaje está saltando
+    private bool isDead = false;    // Verifica si el personaje está muerto
 
     private void Start()
     {
@@ -25,6 +26,12 @@ public class Combat : MonoBehaviour
 
     private void Update()
     {
+        // Si el personaje está muerto, desactivar controles de ataque
+        if (isDead)
+        {
+            return; // No realizar ninguna acción
+        }
+
         // Reducir cooldown del ataque
         if (tiempoSiguienteAtaque > 0)
         {
@@ -36,7 +43,7 @@ public class Combat : MonoBehaviour
             ? new Vector3(-offsetInicial.x, offsetInicial.y, offsetInicial.z) // A la izquierda
             : offsetInicial; // A la derecha
 
-        // Verificar si está saltando, si está saltando no se permite atacar
+        // Verificar si está saltando; si está saltando, no se permite atacar
         if (isJumping)
         {
             return; // No hacer nada si está saltando
@@ -73,6 +80,12 @@ public class Combat : MonoBehaviour
     public void SetIsJumping(bool jumpingState)
     {
         isJumping = jumpingState;
+    }
+
+    // Método para desactivar el combate cuando el personaje muere
+    public void DesactivarCombate()
+    {
+        isDead = true; // Marcar como muerto
     }
 
     private void OnDrawGizmos()
