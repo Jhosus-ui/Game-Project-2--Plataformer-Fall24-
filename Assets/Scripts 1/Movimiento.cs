@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded = false;    // Indica si el personaje está en el suelo
     private bool hasJumpedFromGround = false; // Indica si el personaje ha hecho un salto inicial desde el suelo
     private bool canSingleJumpOnFall = true;  // Permite un único salto al caer sin haber saltado
+    private bool isDead = false;       // Controla si el personaje está muerto
 
     private float coyoteTimeCounter;    // Temporizador de tiempo de gracia para el salto
 
@@ -33,6 +34,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // Si el personaje está muerto, detener todo
+        if (isDead)
+        {
+            rb.velocity = Vector2.zero; // Detener cualquier movimiento
+            return;
+        }
+
         // Movimiento horizontal con suavizado de aceleración/desaceleración
         float moveInput = Input.GetAxis("Horizontal");
         float targetSpeed = moveInput * moveSpeed;
@@ -86,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Lógica de salto
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !isDead) // Evitar salto si está muerto
         {
             if (isGrounded || (coyoteTimeCounter > 0f && canSingleJumpOnFall && !hasJumpedFromGround))
             {
@@ -136,5 +144,15 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    // Método para activar la muerte del personaje
+    public void ActivarMuerte()
+    {
+        isDead = true; // Marcar como muerto
+        animator.SetTrigger("Muerte"); // Activar la animación de muerte
+        rb.velocity = Vector2.zero; // Detener movimiento por completo
+        rb.isKinematic = true; // Desactivar la física para evitar caídas
+        // Aquí puedes añadir efectos o transiciones
     }
 }

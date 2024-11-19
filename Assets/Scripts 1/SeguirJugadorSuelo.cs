@@ -10,6 +10,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
     public float velocidadMovimiento;
     public float distanciaMaxima;
     public Vector3 puntoInicial;
+    public float distanciaMinima = 1f; // Distancia mínima desde el jugador para detenerse
 
     public EstadosMovimiento estadoActual;
 
@@ -80,6 +81,14 @@ public class SeguirJugadorSuelo : MonoBehaviour
             return;
         }
 
+        // Si está dentro de la distancia mínima, detenerse
+        if (Vector2.Distance(transform.position, transformJugador.position) <= distanciaMinima)
+        {
+            rb2D.velocity = Vector2.zero;
+            animator.SetBool("Corriendo", false); // Detener la animación de correr
+            return; // Salir de la lógica de seguimiento
+        }
+
         // Mover hacia el jugador
         if (transform.position.x < transformJugador.position.x)
         {
@@ -146,6 +155,8 @@ public class SeguirJugadorSuelo : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, radioBusqueda);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, distanciaMinima); // Representa la distancia mínima
         Gizmos.DrawWireSphere(puntoInicial, distanciaMaxima);
     }
 }

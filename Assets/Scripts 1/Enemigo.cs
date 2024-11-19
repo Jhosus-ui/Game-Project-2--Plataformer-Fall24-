@@ -7,7 +7,8 @@ public class Enemigo : MonoBehaviour
     [SerializeField] private Transform controladorGolpe; // Referencia al punto de ataque
     [SerializeField] private float radioGolpe = 1f;      // Radio del área de ataque
     [SerializeField] private float danoAtaque = 20f;     // Daño que inflige el ataque
-    [SerializeField] private float cooldownAtaque = 1f;  // Tiempo entre ataques
+    [SerializeField] private float cooldownAtaque = 1f;
+    [SerializeField] private float FrameAtaque = 1f; // Tiempo entre ataques
 
     private Transform jugador; // Referencia al jugador
     private bool puedeAtacar = true; // Controla si el enemigo puede atacar
@@ -59,7 +60,7 @@ public class Enemigo : MonoBehaviour
         animator.SetTrigger("Atacar"); // Activar animación de ataque
 
         // Esperar a que la animación haga contacto (ajusta según tu animación)
-        yield return new WaitForSeconds(0.54f);
+        yield return new WaitForSeconds(FrameAtaque);
 
         // Detectar colisiones en el radio de ataque
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
