@@ -306,7 +306,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &8208569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -545,7 +545,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &35733146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,7 +721,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &46232872
 Rigidbody2D:
   serializedVersion: 4
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &51903759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1219,7 +1219,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &55543290
 Rigidbody2D:
   serializedVersion: 4
@@ -1516,7 +1516,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &88773574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &125581315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2244,7 +2244,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &187613992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8528,7 +8528,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &198972467
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8736,7 +8736,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &200717517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17184,7 +17184,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &212974762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17422,7 +17422,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &231946618
 Rigidbody2D:
   serializedVersion: 4
@@ -17783,7 +17783,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &248597229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18022,7 +18022,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &270822955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18207,7 +18207,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &282790091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18445,7 +18445,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &303882902
 Rigidbody2D:
   serializedVersion: 4
@@ -18680,7 +18680,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &311039023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18918,7 +18918,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &336276918
 Rigidbody2D:
   serializedVersion: 4
@@ -19217,7 +19217,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &356154255
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19478,7 +19478,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &390108214
 Rigidbody2D:
   serializedVersion: 4
@@ -19704,7 +19704,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &401937465
 Rigidbody2D:
   serializedVersion: 4
@@ -20034,7 +20034,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &451804985
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20304,7 +20304,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &458167642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20615,7 +20615,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &513116458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21014,7 +21014,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &526618866
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21213,7 +21213,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &530977211
 Rigidbody2D:
   serializedVersion: 4
@@ -21415,7 +21415,7 @@ Transform:
   m_GameObject: {fileID: 587796666}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: -0.17, z: 0}
+  m_LocalPosition: {x: 1.033, y: -0.267, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21698,7 +21698,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &629906810
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21906,7 +21906,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &632407091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22113,7 +22113,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &681031530
 Rigidbody2D:
   serializedVersion: 4
@@ -22412,7 +22412,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &699907130
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22642,7 +22642,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &718011878
 Rigidbody2D:
   serializedVersion: 4
@@ -23054,7 +23054,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &778790555
 Rigidbody2D:
   serializedVersion: 4
@@ -23311,7 +23311,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &791451867
 Rigidbody2D:
   serializedVersion: 4
@@ -23715,7 +23715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidaMaxima: 20
   vidaActual: 0
-  tiempoGameOver: 1.27
+  tiempoGameOver: 3
 --- !u!1 &816366553
 GameObject:
   m_ObjectHideFlags: 0
@@ -23836,7 +23836,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &838674246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24021,7 +24021,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &848625854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24197,7 +24197,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &850905942
 Rigidbody2D:
   serializedVersion: 4
@@ -24454,7 +24454,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &870670140
 Rigidbody2D:
   serializedVersion: 4
@@ -24753,7 +24753,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &879873670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25001,7 +25001,7 @@ MonoBehaviour:
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
+  distanciaMaxima: 5
   puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
   estadoActual: 0
@@ -25025,7 +25025,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &887578099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25297,7 +25297,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &889009239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25505,7 +25505,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &901706935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25681,7 +25681,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &922319183
 Rigidbody2D:
   serializedVersion: 4
@@ -25916,7 +25916,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &934307202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26322,7 +26322,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &974741957
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -26521,7 +26521,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &982985865
 Rigidbody2D:
   serializedVersion: 4
@@ -26831,7 +26831,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &998916751
 Rigidbody2D:
   serializedVersion: 4
@@ -27150,7 +27150,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1011970383
 Rigidbody2D:
   serializedVersion: 4
@@ -27511,7 +27511,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1055353691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27886,7 +27886,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1111234925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28125,7 +28125,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1129614787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28374,7 +28374,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1133546185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -28604,7 +28604,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1198649906
 Rigidbody2D:
   serializedVersion: 4
@@ -28997,7 +28997,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1270534690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -29196,7 +29196,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1343183903
 Rigidbody2D:
   serializedVersion: 4
@@ -29491,7 +29491,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!58 &1354211789
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29616,7 +29616,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1359140336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29823,7 +29823,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1382582541
 Rigidbody2D:
   serializedVersion: 4
@@ -33603,7 +33603,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1447452572
 Rigidbody2D:
   serializedVersion: 4
@@ -33902,7 +33902,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1455506460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34203,7 +34203,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1539677036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34388,7 +34388,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1557471468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34637,7 +34637,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1558803911
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -34820,7 +34820,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1561807115
 Rigidbody2D:
   serializedVersion: 4
@@ -35259,7 +35259,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1630168339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35529,7 +35529,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1690106689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35705,7 +35705,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1705634100
 Rigidbody2D:
   serializedVersion: 4
@@ -36010,7 +36010,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1727987983
 Rigidbody2D:
   serializedVersion: 4
@@ -36402,7 +36402,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1763654240
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -36610,7 +36610,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &1771244917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36879,7 +36879,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1806217531
 Rigidbody2D:
   serializedVersion: 4
@@ -37178,7 +37178,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1808352110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37481,7 +37481,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1834859281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -37711,7 +37711,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1844602250
 Rigidbody2D:
   serializedVersion: 4
@@ -37937,7 +37937,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1860327497
 Rigidbody2D:
   serializedVersion: 4
@@ -38298,7 +38298,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1908851968
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38487,8 +38487,8 @@ MonoBehaviour:
   controladorGolpe: {fileID: 587796667}
   radioGolpe: 0.6
   danoAtaque: 3
-  cooldownAtaque: 1
-  FrameAtaque: 1
+  cooldownAtaque: 0.5
+  frameAtaque: 1
 --- !u!61 &1937823461
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -38800,7 +38800,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &1942009391
 Rigidbody2D:
   serializedVersion: 4
@@ -39099,7 +39099,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &1955896091
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39495,7 +39495,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &2034238361
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -39703,7 +39703,7 @@ MonoBehaviour:
   radioGolpe: 1
   danoAtaque: 5
   cooldownAtaque: 0.8
-  FrameAtaque: 0.8
+  frameAtaque: 1
 --- !u!114 &2034303796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63694,7 +63694,7 @@ MonoBehaviour:
   radioGolpe: 0.6
   danoAtaque: 3
   cooldownAtaque: 1
-  FrameAtaque: 1
+  frameAtaque: 1
 --- !u!61 &2063126912
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63893,7 +63893,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &2073498280
 Rigidbody2D:
   serializedVersion: 4
@@ -64150,7 +64150,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &2135184618
 Rigidbody2D:
   serializedVersion: 4
@@ -64376,7 +64376,7 @@ MonoBehaviour:
   radioGolpe: 0.7
   danoAtaque: 4
   cooldownAtaque: 1.2
-  FrameAtaque: 1.2
+  frameAtaque: 1
 --- !u!50 &2139808149
 Rigidbody2D:
   serializedVersion: 4
