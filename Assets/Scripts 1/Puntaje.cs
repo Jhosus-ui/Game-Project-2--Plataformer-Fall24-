@@ -1,29 +1,47 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using TMPro; // Necesario para usar TextMeshPro
 
-public class Puntaje : MonoBehaviour
+public class CoreManager : MonoBehaviour
 {
-    private float puntos; // Puntaje actual
-    private TextMeshProUGUI textMesh; // Referencia al componente UI de texto
+    public static CoreManager instance; // Singleton para acceso global.
+    private int totalCores = 0; // Cantidad total de núcleos recolectados.
+
+    public TextMeshProUGUI coreText; // Referencia al texto UI donde se muestra la cantidad.
+
+    private void Awake()
+    {
+        // Asegurar que solo haya una instancia del CoreManager.
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     private void Start()
     {
-        textMesh = GetComponent<TextMeshProUGUI>(); // Obtén el componente de texto
-        ActualizarTexto(); // Inicializa el texto en pantalla
+        ActualizarUI();
     }
 
-    // Este método se llama cuando se recolecta un ítem
-    public void SumarPuntos(float puntosEntrada)
+    public void AñadirCores(int cantidad)
     {
-        puntos += puntosEntrada; // Incrementa el puntaje
-        ActualizarTexto(); // Actualiza el texto de la UI
+        totalCores += cantidad; // Incrementar el total de núcleos.
+        ActualizarUI(); // Actualizar la UI.
     }
 
-    // Método para actualizar el texto en pantalla
-    private void ActualizarTexto()
+    private void ActualizarUI()
     {
-        textMesh.text = puntos.ToString("0"); // Muestra el puntaje sin decimales
+        if (coreText != null)
+        {
+            coreText.text = totalCores.ToString(); // Solo muestra el número de núcleos recolectados.
+        }
+    }
+
+    public int ObtenerTotalCores()
+    {
+        return totalCores; // Devuelve la cantidad total (por si necesitas guardarla o mostrarla).
     }
 }
