@@ -61,4 +61,12 @@ public class PlayerHealth : MonoBehaviour
     {
         return vidaActual; // Retorna la vida actual
     }
+
+    public float GetVidaMaxima()
+    {
+        return vidaMaxima;
+    }
+
+ 
+
 }
