@@ -4,8 +4,9 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float vidaMaxima = 100f; // Vida máxima del jugador
     [SerializeField] private float vidaActual; // Vida actual del jugador
-
     [SerializeField] private float tiempoGameOver = 2f; // Tiempo después de la animación para Game Over
+    [SerializeField] private float intervaloRegeneracion = 2f; // Tiempo en segundos para regenerar vida
+    [SerializeField] private float cantidadRegeneracion = 2f; // Cantidad de vida que se regenera
 
     private Animator animator;
     private PlayerMovement playerMovement; // Referencia al script PlayerMovement
@@ -16,6 +17,9 @@ public class PlayerHealth : MonoBehaviour
         vidaActual = vidaMaxima; // Inicializa la vida actual al máximo
         animator = GetComponent<Animator>(); // Obtiene el componente Animator del jugador
         playerMovement = GetComponent<PlayerMovement>(); // Obtiene el componente PlayerMovement
+
+        // Inicia la regeneración de vida en un intervalo
+        InvokeRepeating(nameof(RegenerarVida), intervaloRegeneracion, intervaloRegeneracion);
     }
 
     public void TomarDano(float dano)
@@ -52,6 +56,21 @@ public class PlayerHealth : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Cargar escena inicial
     }
 
+    private void RegenerarVida()
+    {
+        // Solo regenera si el jugador no está muerto y la vida no está al máximo
+        if (!estaMuerto && vidaActual < vidaMaxima)
+        {
+            vidaActual += cantidadRegeneracion;
+            if (vidaActual > vidaMaxima)
+            {
+                vidaActual = vidaMaxima; // Asegurarse de no exceder la vida máxima
+            }
+
+            Debug.Log("Vida regenerada. Vida actual: " + vidaActual);
+        }
+    }
+
     public bool IsDead()
     {
         return estaMuerto; // Retorna el estado de muerte
@@ -66,7 +85,4 @@ public class PlayerHealth : MonoBehaviour
     {
         return vidaMaxima;
     }
-
- 
-
 }

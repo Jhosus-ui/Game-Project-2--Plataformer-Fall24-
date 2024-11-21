@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6663bceb1276cc4489b8a430fbb55e18
+guid: 923ff2f888a5f784b9ed5b43e0b51316
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,34 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_0
+      name: Efectos_0
       rect:
         serializedVersion: 2
-        x: 179
-        y: 259
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bcf16eaabc663f42b0367b4bdb494ff
-      internalID: 50377983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_1
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 259
-        width: 10
-        height: 10
+        x: 15
+        y: 15
+        width: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12e5e9e3edc79e84cb67399f6ebc8233
-      internalID: -1350081783
+      spriteID: b1da0a41105227a449b4321b5f505e9d
+      internalID: 2096343135
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_2
+      name: Efectos_1
       rect:
         serializedVersion: 2
-        x: 211
-        y: 259
-        width: 10
-        height: 10
+        x: 44
+        y: 15
+        width: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7243742968b7c10449fd41c8bf6d21fa
-      internalID: 1437778706
+      spriteID: c2703ea0956d795418c07d4dc9fb718a
+      internalID: 1014093116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_3
+      name: Efectos_2
       rect:
         serializedVersion: 2
-        x: 227
-        y: 259
-        width: 10
-        height: 10
+        x: 72
+        y: 15
+        width: 25
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +166,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fd09da3b5b03d94685e4d31f6fe2c49
-      internalID: 2028815887
+      spriteID: 8a99d04bdce89054b89e1ae17442dad9
+      internalID: 1466457413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efectos_3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 15
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca00216a72b2db44a856265a1c225c4c
+      internalID: -2027011952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efectos_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 13
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cda5e70808fbb9458fb626d19c55a6a
+      internalID: -329624741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efectos_5
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 13
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80361b0136296884eb14c47863fdc42f
+      internalID: 1361001035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Efectos_6
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 13
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae69e309fffc84d4e81250324d7e94ac
+      internalID: -818708129
       vertices: []
       indices: 
       edges: []
@@ -204,10 +267,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      All_Fire_Bullet_Pixel_16x16_0: 50377983
-      All_Fire_Bullet_Pixel_16x16_1: -1350081783
-      All_Fire_Bullet_Pixel_16x16_2: 1437778706
-      All_Fire_Bullet_Pixel_16x16_3: 2028815887
+      Efectos_0: 2096343135
+      Efectos_1: 1014093116
+      Efectos_2: 1466457413
+      Efectos_3: -2027011952
+      Efectos_4: -329624741
+      Efectos_5: 1361001035
+      Efectos_6: -818708129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
