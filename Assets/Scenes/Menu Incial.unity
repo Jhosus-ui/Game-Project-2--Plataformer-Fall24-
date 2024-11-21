@@ -721,7 +721,6 @@ GameObject:
   - component: {fileID: 592443680}
   - component: {fileID: 592443679}
   - component: {fileID: 592443681}
-  - component: {fileID: 592443682}
   m_Layer: 0
   m_Name: Fondo
   m_TagString: Untagged
@@ -812,20 +811,6 @@ MonoBehaviour:
   fadeOutSpeed: 1
   minOpacity: 0
   maxOpacity: 1
---- !u!114 &592443682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592443678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a42a96649024d8498c04d83cb43425d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: Fondo
-  fadeOutSpeed: 1
 --- !u!1 &1028709535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +1009,6 @@ GameObject:
   - component: {fileID: 1380891531}
   - component: {fileID: 1380891530}
   - component: {fileID: 1380891532}
-  - component: {fileID: 1380891533}
   m_Layer: 0
   m_Name: Message de Bienvenida
   m_TagString: Untagged
@@ -1117,20 +1101,6 @@ MonoBehaviour:
   fadeOutSpeed: 1
   minOpacity: 0
   maxOpacity: 1
---- !u!114 &1380891533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1380891529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a42a96649024d8498c04d83cb43425d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: Message de Bienvenida
-  fadeOutSpeed: 1
 --- !u!1 &1566036035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,7 +1282,6 @@ GameObject:
   - component: {fileID: 2087658742}
   - component: {fileID: 2087658741}
   - component: {fileID: 2087658744}
-  - component: {fileID: 2087658745}
   m_Layer: 0
   m_Name: Efectos_0
   m_TagString: Untagged
@@ -1426,20 +1395,6 @@ MonoBehaviour:
   fadeOutSpeed: 1
   minOpacity: 0
   maxOpacity: 1
---- !u!114 &2087658745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2087658740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a42a96649024d8498c04d83cb43425d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectID: Efectos_0
-  fadeOutSpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
