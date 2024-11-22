@@ -8,6 +8,9 @@ public class Combat : MonoBehaviour
     [SerializeField] private float danoGolpe;
     [SerializeField] private float tiempoDeAtaque;
 
+    [SerializeField] private AudioClip sonidoGolpe; // Sonido del ataque
+    private AudioSource audioSource;
+
     private float tiempoSiguienteAtaque;
     private Animator animator;
     private SpriteRenderer spriteRenderer; // Para verificar la dirección del personaje
@@ -22,6 +25,7 @@ public class Combat : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         offsetInicial = controladorGolpe.localPosition; // Posición relativa inicial
+        audioSource = GetComponent<AudioSource>(); // Obtener AudioSource del objeto
     }
 
     private void Update()
@@ -60,6 +64,12 @@ public class Combat : MonoBehaviour
     private void Golpe()
     {
         animator.SetTrigger("Golpe");
+
+        // Reproducir sonido del golpe
+        if (sonidoGolpe != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(sonidoGolpe);
+        }
 
         // Detectar colisiones en el radio de ataque
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);

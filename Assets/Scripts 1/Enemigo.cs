@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-    [SerializeField] private float vida = 100f;        // Vida del enemigo
+    [SerializeField] private float vida = 100f; // Vida del enemigo
     [SerializeField] private Transform controladorGolpe; // Punto de ataque
-    [SerializeField] private float radioGolpe = 1f;    // Radio de ataque
-    [SerializeField] private float danoAtaque = 20f;  // Daño que inflige el enemigo
+    [SerializeField] private float radioGolpe = 1f; // Radio de ataque
+    [SerializeField] private float danoAtaque = 20f; // Daño que inflige el enemigo
     [SerializeField] private float cooldownAtaque = 1f; // Tiempo entre ataques
-    [SerializeField] private float frameAtaque = 1f;  // Momento de contacto durante la animación de ataque
+    [SerializeField] private float frameAtaque = 1f; // Momento de contacto durante la animación de ataque
+    [SerializeField] private AudioClip sonidoAtaque; // Sonido de ataque
+    [SerializeField] private AudioClip sonidoMuerte; // Sonido de muerte
 
     private Transform jugador; // Referencia al jugador
     private bool puedeAtacar = true; // Controla si el enemigo puede atacar
@@ -16,6 +18,7 @@ public class Enemigo : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Vector3 posicionInicialGolpe; // Posición relativa inicial del controlador de golpe
+    private AudioSource audioSource;
 
     public float Vida => vida; // Propiedad pública para obtener la vida del enemigo
 
@@ -23,6 +26,7 @@ public class Enemigo : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         jugador = GameObject.FindGameObjectWithTag("Player").transform; // Busca al jugador por su tag
         posicionInicialGolpe = controladorGolpe.localPosition; // Guarda la posición inicial del controlador de golpe
     }
@@ -40,9 +44,6 @@ public class Enemigo : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Actualiza la posición del controlador de golpe según la dirección del sprite
-    /// </summary>
     private void ActualizarControladorGolpe()
     {
         controladorGolpe.localPosition = spriteRenderer.flipX
@@ -50,20 +51,22 @@ public class Enemigo : MonoBehaviour
             : posicionInicialGolpe;
     }
 
-    /// <summary>
-    /// Lógica de ataque del enemigo
-    /// </summary>
     private IEnumerator Atacar()
     {
         puedeAtacar = false;
         animator.SetTrigger("Atacar");
 
-        // Esperar hasta el momento de contacto del ataque
+        // Reproducir sonido de ataque
+        if (sonidoAtaque != null && audioSource != null)
+        {
+            audioSource.clip = sonidoAtaque; // Asignar el clip de sonido
+            audioSource.Play(); // Reproducir el sonido de ataque
+        }
+
         yield return new WaitForSeconds(frameAtaque);
 
         if (estaMuerto) yield break; // Si el enemigo murió antes del contacto, cancelar el ataque
 
-        // Detectar colisiones en el área de ataque
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
         foreach (Collider2D colisionador in objetos)
         {
@@ -77,15 +80,10 @@ public class Enemigo : MonoBehaviour
             }
         }
 
-        // Esperar el cooldown antes del próximo ataque
         yield return new WaitForSeconds(cooldownAtaque);
         puedeAtacar = true;
     }
 
-    /// <summary>
-    /// Lógica para recibir daño
-    /// </summary>
-    /// <param name="dano">Daño recibido</param>
     public void TomarDano(float dano)
     {
         if (estaMuerto) return; // Si ya está muerto, ignorar daño
@@ -95,24 +93,33 @@ public class Enemigo : MonoBehaviour
         if (vida <= 0)
         {
             vida = 0; // Asegurarse de que no sea negativa
-            Muerte();
+            StartCoroutine(Muerte());
         }
     }
 
-    /// <summary>
-    /// Lógica de muerte del enemigo
-    /// </summary>
-    private void Muerte()
+    private IEnumerator Muerte()
     {
         estaMuerto = true; // Marcar al enemigo como muerto
         animator.SetTrigger("Muerte"); // Activar la animación de muerte
         controladorGolpe.gameObject.SetActive(false); // Desactivar el controlador de golpe para evitar daño
-        Destroy(gameObject, 1f); // Destruir al enemigo después de la animación de muerte
+
+        // Detener cualquier sonido en reproducción
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+
+        // Reproducir sonido de muerte
+        if (sonidoMuerte != null && audioSource != null)
+        {
+            audioSource.clip = sonidoMuerte;
+            audioSource.Play();
+            yield return new WaitForSeconds(sonidoMuerte.length); // Esperar a que termine el audio
+        }
+
+        Destroy(gameObject); // Destruir al enemigo después de que el audio termine
     }
 
-    /// <summary>
-    /// Dibuja el área de ataque en la vista de escena
-    /// </summary>
     private void OnDrawGizmosSelected()
     {
         if (controladorGolpe != null)
