@@ -15,4 +15,6 @@ public class ButtonController : MonoBehaviour
         Application.Quit();
         Debug.Log("Game exited."); // Solo se ve en el editor.
     }
+
+
 }

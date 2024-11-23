@@ -7,9 +7,12 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float tiempoGameOver = 2f; // Tiempo después de la animación para Game Over
     [SerializeField] private float intervaloRegeneracion = 2f; // Tiempo en segundos para regenerar vida
     [SerializeField] private float cantidadRegeneracion = 2f; // Cantidad de vida que se regenera
+    [SerializeField] private AudioClip sonidoDano; // Sonido que se reproduce al recibir daño
+    [SerializeField] private AudioClip sonidoMuerte; // Sonido que se reproduce al morir
 
     private Animator animator;
     private PlayerMovement playerMovement; // Referencia al script PlayerMovement
+    private AudioSource audioSource; // Fuente de audio para reproducir sonidos
     private bool estaMuerto = false; // Controla si el jugador ya murió
 
     private void Start()
@@ -17,6 +20,12 @@ public class PlayerHealth : MonoBehaviour
         vidaActual = vidaMaxima; // Inicializa la vida actual al máximo
         animator = GetComponent<Animator>(); // Obtiene el componente Animator del jugador
         playerMovement = GetComponent<PlayerMovement>(); // Obtiene el componente PlayerMovement
+        audioSource = GetComponent<AudioSource>(); // Obtiene el componente AudioSource
+
+        if (audioSource == null)
+        {
+            Debug.LogError("No se encontró un AudioSource en el jugador. Agrega uno para reproducir sonidos.");
+        }
 
         // Inicia la regeneración de vida en un intervalo
         InvokeRepeating(nameof(RegenerarVida), intervaloRegeneracion, intervaloRegeneracion);
@@ -27,6 +36,12 @@ public class PlayerHealth : MonoBehaviour
         if (estaMuerto) return; // Si ya está muerto, no hacer nada
 
         vidaActual -= dano;
+
+        // Reproducir sonido de daño
+        if (sonidoDano != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(sonidoDano);
+        }
 
         Debug.Log("Jugador recibió daño. Vida restante: " + vidaActual);
 
@@ -42,10 +57,40 @@ public class PlayerHealth : MonoBehaviour
         estaMuerto = true;
         animator.SetTrigger("Muerte"); // Activar la animación de muerte
 
+        // Reproducir sonido de muerte
+        if (sonidoMuerte != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(sonidoMuerte);
+        }
+
         if (playerMovement != null)
         {
             playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
         }
+
+        FadingObject fadingObject = FindObjectOfType<FadingObject>();
+        if (fadingObject != null)
+        {
+            fadingObject.IniciarFade();
+            fadingObject.DetenerMusica(); // Detener la música de ambientación
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
+        }
+
+        Combat combat = GetComponent<Combat>();
+        if (combat != null)
+        {
+            combat.DesactivarCombate();
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
+        }
+
 
         Invoke(nameof(GameOver), tiempoGameOver); // Invocar Game Over después de un tiempo
     }
@@ -53,7 +98,7 @@ public class PlayerHealth : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("Game Over");
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0); // Cargar escena inicial
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1); // Cargar escena inicial
     }
 
     private void RegenerarVida()

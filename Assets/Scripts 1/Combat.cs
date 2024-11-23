@@ -92,10 +92,11 @@ public class Combat : MonoBehaviour
         isJumping = jumpingState;
     }
 
-    // Método para desactivar el combate cuando el personaje muere
+    // Método para desactivar el combate cuando el personaje muere o hay Game Over
     public void DesactivarCombate()
     {
-        isDead = true; // Marcar como muerto
+        isDead = true; // Marcar como muerto para bloquear controles
+        Debug.Log("Combate desactivado: el jugador está muerto o en Game Over.");
     }
 
     private void OnDrawGizmos()

@@ -41,4 +41,14 @@ public class LevelController : MonoBehaviour
     {
         CompleteLevel();
     }
+
+    private void RealizarAccion()
+    {
+        LevelController levelController = FindObjectOfType<LevelController>();
+        if (levelController != null)
+        {
+            levelController.CompleteLevel();
+        }
+    }
+
 }
