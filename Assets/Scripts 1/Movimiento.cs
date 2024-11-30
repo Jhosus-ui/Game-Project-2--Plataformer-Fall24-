@@ -9,28 +9,28 @@ public class PlayerMovement : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float coyoteTime = 0.2f;
 
-    private const float movementThreshold = 0.1f; // Umbral mínimo para considerar movimiento
-    private const float fallThreshold = -0.5f;    // Velocidad Y para activar animación de caída
-    private const float verticalThreshold = 0.1f; // Umbral mínimo para considerar movimiento vertical
+    private const float movementThreshold = 0.1f;
+    private const float fallThreshold = -0.5f;
+    private const float verticalThreshold = 0.1f;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private bool isGrounded = false; // Indica si el personaje está en el suelo
-    private bool hasDoubleJumped = false; // Detectar si ya realizó un doble salto
+    private bool isGrounded = false;
+    private bool hasDoubleJumped = false;
     private bool isDead = false;
 
     private float coyoteTimeCounter;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
     }
 
-    private void Update()
+    void Update()
     {
         if (isDead) return;
 
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
-            hasDoubleJumped = false; // Restablecer el estado de doble salto
+            hasDoubleJumped = false;
         }
         else
         {
@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (!isGrounded && !hasDoubleJumped)
             {
-                DoubleJump(); // Realizar el doble salto
+                DoubleJump();
             }
         }
     }
@@ -94,14 +94,14 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetTrigger("Jump"); // Animación de salto normal
+        animator.SetTrigger("Jump");
     }
 
     private void DoubleJump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetTrigger("DoubleJump"); // Animación de doble salto
-        hasDoubleJumped = true; // Marcar que el doble salto ya se usó
+        animator.SetTrigger("DoubleJump");
+        hasDoubleJumped = true;
     }
 
     private void UpdateAnimations()
@@ -109,7 +109,6 @@ public class PlayerMovement : MonoBehaviour
         // Movimiento horizontal
         float xVelocity = Mathf.Abs(rb.velocity.x);
 
-        // Filtrar valores pequeños para evitar fluctuaciones en XVelocity
         if (xVelocity < movementThreshold)
         {
             xVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
@@ -120,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
         // Movimiento vertical
         float yVelocity = rb.velocity.y;
 
-        // Filtrar valores pequeños para evitar fluctuaciones en YVelocity
         if (Mathf.Abs(yVelocity) < verticalThreshold)
         {
             yVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
@@ -128,50 +126,63 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("YVelocity", yVelocity);
 
-        // Detectar si está cayendo
-        if (yVelocity < fallThreshold && !isGrounded)
+        // Detectar si está cayendo, pero solo si "isFalling" no fue activado por otra acción
+        if (!animator.GetBool("isFalling"))
         {
-            animator.SetBool("isFalling", true);
-            animator.SetBool("isJumping", false);
-        }
-        else if (isGrounded)
-        {
-            animator.SetBool("isFalling", false);
-            animator.SetBool("isJumping", false);
-        }
-        else if (yVelocity > 0 && !isGrounded)
-        {
-            animator.SetBool("isJumping", true);
-            animator.SetBool("isFalling", false);
+            if (yVelocity < fallThreshold && !isGrounded)
+            {
+                animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false);
+            }
+            else if (isGrounded)
+            {
+                animator.SetBool("isFalling", false);
+                animator.SetBool("isJumping", false);
+            }
+            else if (yVelocity > 0 && !isGrounded)
+            {
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFalling", false);
+            }
         }
     }
 
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        // Verificar si el jugador tocó el suelo
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
             animator.SetBool("isGrounded", true);
             animator.SetBool("isFalling", false);
+        }
 
-            // Forzar la transición al estado "Movement" si es necesario
-            animator.Play("Movement");
-
-            Debug.Log("Personaje tocó el suelo. isGrounded: " + isGrounded);
+        // Verificar si el jugador aterrizó correctamente en la plataforma
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            // Verificar si el contacto es desde arriba usando la normal de colisión
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f) // Contacto desde arriba
+                {
+                    isGrounded = true;
+                    animator.SetBool("isGrounded", true);
+                    animator.SetBool("isFalling", false);
+                    return;
+                }
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = false;
             animator.SetBool("isGrounded", false);
-
-            Debug.Log("Personaje dejó de tocar el suelo. isGrounded: " + isGrounded);
         }
     }
-
 
     public void ActivarMuerte()
     {
