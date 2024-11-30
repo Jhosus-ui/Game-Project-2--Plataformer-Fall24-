@@ -17,7 +17,6 @@ public class Combat : MonoBehaviour
     private Vector3 offsetInicial; // Guarda la posición inicial del controladorGolpe relativa al jugador
 
     // Variables de estado
-    private bool isJumping = false; // Verifica si el personaje está saltando
     private bool isDead = false;    // Verifica si el personaje está muerto
 
     private void Start()
@@ -46,12 +45,6 @@ public class Combat : MonoBehaviour
         controladorGolpe.localPosition = spriteRenderer.flipX
             ? new Vector3(-offsetInicial.x, offsetInicial.y, offsetInicial.z) // A la izquierda
             : offsetInicial; // A la derecha
-
-        // Verificar si está saltando; si está saltando, no se permite atacar
-        if (isJumping)
-        {
-            return; // No hacer nada si está saltando
-        }
 
         // Ejecutar ataque si el cooldown permite
         if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
@@ -84,12 +77,6 @@ public class Combat : MonoBehaviour
                 }
             }
         }
-    }
-
-    // Método para actualizar el estado de saltar
-    public void SetIsJumping(bool jumpingState)
-    {
-        isJumping = jumpingState;
     }
 
     // Método para desactivar el combate cuando el personaje muere o hay Game Over
