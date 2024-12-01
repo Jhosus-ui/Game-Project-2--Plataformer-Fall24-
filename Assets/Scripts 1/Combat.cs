@@ -3,21 +3,35 @@ using UnityEngine;
 
 public class Combat : MonoBehaviour
 {
+    [Header("Ataque Ligero")]
     [SerializeField] private Transform controladorGolpe;
     [SerializeField] private float radioGolpe;
-    [SerializeField] private float danoGolpe;
-    [SerializeField] private float tiempoDeAtaque;
+    [SerializeField] private float danoGolpeLigero;
+    [SerializeField] private float tiempoDeAtaqueLigero;
+    [SerializeField] private float costoEstaminaLigero = 10f; // Costo de estamina para ataque ligero
 
-    [SerializeField] private AudioClip sonidoGolpe; // Sonido del ataque
+    [Header("Ataque Pesado")]
+    [SerializeField] private float danoGolpePesado;
+    [SerializeField] private float tiempoDeAtaquePesado;
+    [SerializeField] private float retrasoGolpePesado; // Retraso antes de aplicar daño (por animación)
+    [SerializeField] private float costoEstaminaPesado = 20f; // Costo de estamina para ataque pesado
+
+    [Header("Sonidos")]
+    [SerializeField] private AudioClip sonidoGolpeLigero; // Sonido del ataque ligero
+    [SerializeField] private AudioClip sonidoGolpePesado; // Sonido del ataque pesado
+
     private AudioSource audioSource;
 
-    private float tiempoSiguienteAtaque;
+    private float tiempoSiguienteAtaqueLigero;
+    private float tiempoSiguienteAtaquePesado;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer; // Para verificar la dirección del personaje
     private Vector3 offsetInicial; // Guarda la posición inicial del controladorGolpe relativa al jugador
+    private StaminaManager staminaManager; // Referencia al script de estamina
 
     // Variables de estado
-    private bool isDead = false;    // Verifica si el personaje está muerto
+    private bool isDead = false; // Verifica si el personaje está muerto
 
     private void Start()
     {
@@ -25,6 +39,12 @@ public class Combat : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         offsetInicial = controladorGolpe.localPosition; // Posición relativa inicial
         audioSource = GetComponent<AudioSource>(); // Obtener AudioSource del objeto
+        staminaManager = GetComponent<StaminaManager>(); // Obtener referencia al script de estamina
+
+        if (staminaManager == null)
+        {
+            Debug.LogError("StaminaManager no encontrado. Asegúrate de que el script está en el mismo GameObject.");
+        }
     }
 
     private void Update()
@@ -35,10 +55,14 @@ public class Combat : MonoBehaviour
             return; // No realizar ninguna acción
         }
 
-        // Reducir cooldown del ataque
-        if (tiempoSiguienteAtaque > 0)
+        // Reducir cooldown de ataques
+        if (tiempoSiguienteAtaqueLigero > 0)
         {
-            tiempoSiguienteAtaque -= Time.deltaTime;
+            tiempoSiguienteAtaqueLigero -= Time.deltaTime;
+        }
+        if (tiempoSiguienteAtaquePesado > 0)
+        {
+            tiempoSiguienteAtaquePesado -= Time.deltaTime;
         }
 
         // Ajustar posición del controladorGolpe al frente del personaje
@@ -46,22 +70,35 @@ public class Combat : MonoBehaviour
             ? new Vector3(-offsetInicial.x, offsetInicial.y, offsetInicial.z) // A la izquierda
             : offsetInicial; // A la derecha
 
-        // Ejecutar ataque si el cooldown permite
-        if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaque <= 0)
+        // Ejecutar ataque ligero si el cooldown permite
+        if (Input.GetButtonDown("Fire1") && tiempoSiguienteAtaqueLigero <= 0)
         {
-            Golpe();
-            tiempoSiguienteAtaque = tiempoDeAtaque;
+            if (staminaManager.ConsumeStamina(costoEstaminaLigero)) // Consumir estamina
+            {
+                AtaqueLigero();
+                tiempoSiguienteAtaqueLigero = tiempoDeAtaqueLigero;
+            }
+        }
+
+        // Ejecutar ataque pesado si el cooldown permite
+        if (Input.GetButtonDown("Fire2") && tiempoSiguienteAtaquePesado <= 0)
+        {
+            if (staminaManager.ConsumeStamina(costoEstaminaPesado)) // Consumir estamina
+            {
+                StartCoroutine(AtaquePesado());
+                tiempoSiguienteAtaquePesado = tiempoDeAtaquePesado;
+            }
         }
     }
 
-    private void Golpe()
+    private void AtaqueLigero()
     {
-        animator.SetTrigger("Golpe");
+        animator.SetTrigger("AtaqueLigero");
 
-        // Reproducir sonido del golpe
-        if (sonidoGolpe != null && audioSource != null)
+        // Reproducir sonido del ataque ligero
+        if (sonidoGolpeLigero != null && audioSource != null)
         {
-            audioSource.PlayOneShot(sonidoGolpe);
+            audioSource.PlayOneShot(sonidoGolpeLigero);
         }
 
         // Detectar colisiones en el radio de ataque
@@ -73,7 +110,35 @@ public class Combat : MonoBehaviour
                 Enemigo enemigo = colisionador.GetComponent<Enemigo>();
                 if (enemigo != null)
                 {
-                    enemigo.TomarDano(danoGolpe);
+                    enemigo.TomarDano(danoGolpeLigero);
+                }
+            }
+        }
+    }
+
+    private IEnumerator AtaquePesado()
+    {
+        animator.SetTrigger("AtaquePesado");
+
+        // Reproducir sonido del ataque pesado
+        if (sonidoGolpePesado != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(sonidoGolpePesado);
+        }
+
+        // Esperar el retraso para sincronizar con la animación
+        yield return new WaitForSeconds(retrasoGolpePesado);
+
+        // Detectar colisiones en el radio de ataque
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
+        foreach (Collider2D colisionador in objetos)
+        {
+            if (colisionador.CompareTag("Enemigo"))
+            {
+                Enemigo enemigo = colisionador.GetComponent<Enemigo>();
+                if (enemigo != null)
+                {
+                    enemigo.TomarDano(danoGolpePesado);
                 }
             }
         }

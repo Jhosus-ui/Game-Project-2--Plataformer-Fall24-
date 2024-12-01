@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private PlayerMovement playerMovement; // Referencia al script PlayerMovement
     private AudioSource audioSource; // Fuente de audio para reproducir sonidos
     private bool estaMuerto = false; // Controla si el jugador ya murió
+    private bool esInvulnerable = false; // Controla si el jugador es invulnerable
 
     private void Start()
     {
@@ -33,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TomarDano(float dano)
     {
-        if (estaMuerto) return; // Si ya está muerto, no hacer nada
+        if (estaMuerto || esInvulnerable) return; // Si ya está muerto o es invulnerable, no hacer nada
 
         vidaActual -= dano;
 
@@ -52,7 +53,6 @@ public class PlayerHealth : MonoBehaviour
             Muerte();
         }
     }
-
 
     private void Muerte()
     {
@@ -93,7 +93,6 @@ public class PlayerHealth : MonoBehaviour
             playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
         }
 
-
         Invoke(nameof(GameOver), tiempoGameOver); // Invocar Game Over después de un tiempo
     }
 
@@ -116,6 +115,18 @@ public class PlayerHealth : MonoBehaviour
 
             Debug.Log("Vida regenerada. Vida actual: " + vidaActual);
         }
+    }
+
+    public void ActivarInvulnerabilidad()
+    {
+        esInvulnerable = true; // Activa la invulnerabilidad
+        Debug.Log("Invulnerabilidad activada.");
+    }
+
+    public void DesactivarInvulnerabilidad()
+    {
+        esInvulnerable = false; // Desactiva la invulnerabilidad
+        Debug.Log("Invulnerabilidad desactivada.");
     }
 
     public bool IsDead()

@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded = false;
     private bool hasDoubleJumped = false;
     private bool isDead = false;
+    private bool isControlsActive = true; // Nuevo: Controla si los controles están activos
 
     private float coyoteTimeCounter;
 
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isDead) return;
+        if (isDead || !isControlsActive) return; // Desactivar controles si está muerto o deshabilitado
 
         HandleMovement();
         HandleJump();
@@ -105,52 +106,47 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void UpdateAnimations()
-{
-    // Movimiento horizontal
-    float xVelocity = Mathf.Abs(rb.velocity.x);
-
-    if (xVelocity < movementThreshold)
     {
-        xVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
-    }
+        float xVelocity = Mathf.Abs(rb.velocity.x);
 
-    animator.SetFloat("XVelocity", xVelocity);
-
-    // Movimiento vertical
-    float yVelocity = rb.velocity.y;
-
-    if (Mathf.Abs(yVelocity) < verticalThreshold)
-    {
-        yVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
-    }
-
-    animator.SetFloat("YVelocity", yVelocity);
-
-    // Detectar si está cayendo, pero solo si "isFalling" no fue activado por otra acción
-    if (!animator.GetBool("isFalling"))
-    {
-        if (yVelocity < fallThreshold && !isGrounded)
+        if (xVelocity < movementThreshold)
         {
-            animator.SetBool("isFalling", true);
-            animator.SetBool("isJumping", false);
+            xVelocity = 0f;
         }
-        else if (isGrounded)
+
+        animator.SetFloat("XVelocity", xVelocity);
+
+        float yVelocity = rb.velocity.y;
+
+        if (Mathf.Abs(yVelocity) < verticalThreshold)
         {
-            animator.SetBool("isFalling", false);
-            animator.SetBool("isJumping", false);
+            yVelocity = 0f;
         }
-        else if (yVelocity > 0 && !isGrounded)
+
+        animator.SetFloat("YVelocity", yVelocity);
+
+        if (!animator.GetBool("isFalling"))
         {
-            animator.SetBool("isJumping", true);
-            animator.SetBool("isFalling", false);
+            if (yVelocity < fallThreshold && !isGrounded)
+            {
+                animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false);
+            }
+            else if (isGrounded)
+            {
+                animator.SetBool("isFalling", false);
+                animator.SetBool("isJumping", false);
+            }
+            else if (yVelocity > 0 && !isGrounded)
+            {
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFalling", false);
+            }
         }
     }
-}
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Verificar si el jugador tocó el suelo
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -158,13 +154,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
 
-        // Verificar si el jugador aterrizó correctamente en la plataforma
         if (collision.gameObject.CompareTag("Platform"))
         {
-            // Verificar si el contacto es desde arriba usando la normal de colisión
             foreach (ContactPoint2D contact in collision.contacts)
             {
-                if (contact.normal.y > 0.5f) // Contacto desde arriba
+                if (contact.normal.y > 0.5f)
                 {
                     isGrounded = true;
                     animator.SetBool("isGrounded", true);
@@ -191,5 +185,17 @@ public class PlayerMovement : MonoBehaviour
         rb.isKinematic = true;
         rb.simulated = false;
         animator.SetTrigger("Muerte");
+    }
+
+    // Nuevo: Métodos para activar y desactivar controles
+    public void DesactivarControles()
+    {
+        isControlsActive = false;
+        rb.velocity = Vector2.zero; // Opcional: detener al jugador al desactivar controles
+    }
+
+    public void ActivarControles()
+    {
+        isControlsActive = true;
     }
 }

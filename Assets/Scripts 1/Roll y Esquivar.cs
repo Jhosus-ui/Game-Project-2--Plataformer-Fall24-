@@ -6,13 +6,17 @@ public class PlayerDodgeRoll : MonoBehaviour
     public float rollDistance = 3f; // Distancia del roll hacia adelante
     public float rollCooldown = 0.5f; // Tiempo mínimo entre rolls consecutivos
     public float rollDuration = 0.3f; // Duración del roll
+    public float rollStaminaCost = 20f; // Costo de estamina para rodar
 
     [Header("Dodge Settings")]
     public float dodgeDistance = 2f; // Distancia del esquive hacia atrás
+    public float dodgeStaminaCost = 10f; // Costo de estamina para esquivar
 
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private PlayerMovement playerMovement; // Referencia al script de movimiento
+    private StaminaManager staminaManager; // Referencia al script de estamina
 
     private bool isRolling = false; // Controla si el jugador está en estado de roll
     private float lastRollTime = 0; // Tiempo del último roll realizado
@@ -24,6 +28,13 @@ public class PlayerDodgeRoll : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerMovement = GetComponent<PlayerMovement>(); // Obtener referencia al script de movimiento
+        staminaManager = GetComponent<StaminaManager>(); // Obtener referencia al script de estamina
+
+        if (staminaManager == null)
+        {
+            Debug.LogError("StaminaManager no encontrado. Asegúrate de que el script está en el mismo GameObject.");
+        }
     }
 
     private void Update()
@@ -59,9 +70,10 @@ public class PlayerDodgeRoll : MonoBehaviour
 
     private void Roll()
     {
-        if (Time.time - lastRollTime < rollCooldown) return; // Enfriamiento del roll
+        if (Time.time - lastRollTime < rollCooldown || !staminaManager.ConsumeStamina(rollStaminaCost)) return; // Consumir estamina para rodar
 
         isRolling = true;
+        playerMovement?.DesactivarControles(); // Desactivar controles del movimiento
         animator.SetTrigger("Roll"); // Activar animación de rodar
 
         // Mover al jugador hacia adelante en la dirección actual
@@ -74,8 +86,9 @@ public class PlayerDodgeRoll : MonoBehaviour
 
     private void Dodge()
     {
-        if (isRolling || shiftPressCount == 2) return; // No esquivar si está rodando o si se detectó un roll
+        if (isRolling || shiftPressCount == 2 || !staminaManager.ConsumeStamina(dodgeStaminaCost)) return; // Consumir estamina para esquivar
 
+        playerMovement?.DesactivarControles(); // Desactivar controles del movimiento
         animator.SetTrigger("Dodge"); // Activar animación de esquivar
 
         // Mover al jugador hacia atrás
@@ -89,10 +102,12 @@ public class PlayerDodgeRoll : MonoBehaviour
     {
         isRolling = false;
         rb.velocity = Vector2.zero; // Detener movimiento
+        playerMovement?.ActivarControles(); // Reactivar controles del movimiento
     }
 
     private void StopDodge()
     {
         rb.velocity = Vector2.zero; // Detener movimiento después del esquive
+        playerMovement?.ActivarControles(); // Reactivar controles del movimiento
     }
 }
