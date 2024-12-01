@@ -34093,6 +34093,7 @@ GameObject:
   - component: {fileID: 815158176}
   - component: {fileID: 815158177}
   - component: {fileID: 815158178}
+  - component: {fileID: 815158179}
   m_Layer: 6
   m_Name: Caballero
   m_TagString: Player
@@ -34436,6 +34437,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &815158179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815158167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a5a61784fcbcc419f2f08e9a59a2ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rollDistance: 12
+  rollCooldown: 0.5
+  rollDuration: 0.5
+  dodgeDistance: 6
 --- !u!1 &816366553
 GameObject:
   m_ObjectHideFlags: 0
