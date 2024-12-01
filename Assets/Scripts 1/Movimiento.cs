@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        animator.SetTrigger("Jump");
+        animator.SetTrigger("isJumping");
     }
 
     private void DoubleJump()
@@ -105,47 +105,47 @@ public class PlayerMovement : MonoBehaviour
     }
 
     private void UpdateAnimations()
+{
+    // Movimiento horizontal
+    float xVelocity = Mathf.Abs(rb.velocity.x);
+
+    if (xVelocity < movementThreshold)
     {
-        // Movimiento horizontal
-        float xVelocity = Mathf.Abs(rb.velocity.x);
+        xVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
+    }
 
-        if (xVelocity < movementThreshold)
+    animator.SetFloat("XVelocity", xVelocity);
+
+    // Movimiento vertical
+    float yVelocity = rb.velocity.y;
+
+    if (Mathf.Abs(yVelocity) < verticalThreshold)
+    {
+        yVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
+    }
+
+    animator.SetFloat("YVelocity", yVelocity);
+
+    // Detectar si está cayendo, pero solo si "isFalling" no fue activado por otra acción
+    if (!animator.GetBool("isFalling"))
+    {
+        if (yVelocity < fallThreshold && !isGrounded)
         {
-            xVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
+            animator.SetBool("isFalling", true);
+            animator.SetBool("isJumping", false);
         }
-
-        animator.SetFloat("XVelocity", xVelocity);
-
-        // Movimiento vertical
-        float yVelocity = rb.velocity.y;
-
-        if (Mathf.Abs(yVelocity) < verticalThreshold)
+        else if (isGrounded)
         {
-            yVelocity = 0f; // Redondear a 0 si la velocidad es demasiado baja
+            animator.SetBool("isFalling", false);
+            animator.SetBool("isJumping", false);
         }
-
-        animator.SetFloat("YVelocity", yVelocity);
-
-        // Detectar si está cayendo, pero solo si "isFalling" no fue activado por otra acción
-        if (!animator.GetBool("isFalling"))
+        else if (yVelocity > 0 && !isGrounded)
         {
-            if (yVelocity < fallThreshold && !isGrounded)
-            {
-                animator.SetBool("isFalling", true);
-                animator.SetBool("isJumping", false);
-            }
-            else if (isGrounded)
-            {
-                animator.SetBool("isFalling", false);
-                animator.SetBool("isJumping", false);
-            }
-            else if (yVelocity > 0 && !isGrounded)
-            {
-                animator.SetBool("isJumping", true);
-                animator.SetBool("isFalling", false);
-            }
+            animator.SetBool("isJumping", true);
+            animator.SetBool("isFalling", false);
         }
     }
+}
 
 
     private void OnCollisionEnter2D(Collision2D collision)

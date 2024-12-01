@@ -37,10 +37,11 @@ public class PlayerHealth : MonoBehaviour
 
         vidaActual -= dano;
 
-        // Reproducir sonido de daño
+        // Reproducir sonido de daño sin retrasos
         if (sonidoDano != null && audioSource != null)
         {
-            audioSource.PlayOneShot(sonidoDano);
+            audioSource.clip = sonidoDano;
+            audioSource.Play(); // Reproducir inmediatamente
         }
 
         Debug.Log("Jugador recibió daño. Vida restante: " + vidaActual);
@@ -51,6 +52,7 @@ public class PlayerHealth : MonoBehaviour
             Muerte();
         }
     }
+
 
     private void Muerte()
     {
