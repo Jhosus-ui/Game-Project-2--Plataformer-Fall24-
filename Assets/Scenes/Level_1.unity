@@ -373,7 +373,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1009923407}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -862,7 +862,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 757920728}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 457500140}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1995866244}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -2014,7 +2014,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 360281746}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1923307558}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -3261,7 +3261,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 158993163}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -3859,7 +3859,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 236366967}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -10562,7 +10562,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 198796223}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -10869,7 +10869,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1407798978}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -19489,7 +19489,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1572134994}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -19899,7 +19899,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1896834915}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -20364,7 +20364,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1842808751}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -20976,7 +20976,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 460990033}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -21833,7 +21833,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 322796687}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -22233,7 +22233,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 762781622}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -22567,7 +22567,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 333438587}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -23103,7 +23103,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 577583241}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -23501,7 +23501,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 24650127}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -24457,7 +24457,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1787726602}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -25043,7 +25043,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1751796988}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -26027,7 +26027,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1738999607}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -26396,7 +26396,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1782998507}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -27142,7 +27142,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 749048753}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -27640,7 +27640,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1962250020}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -28006,7 +28006,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 215278876}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -29503,7 +29503,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1416501984}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -29815,7 +29815,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 383239557}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -30885,7 +30885,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1573287378}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -31389,7 +31389,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1046970693}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -32172,7 +32172,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 80008517}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -33105,7 +33105,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1193077478}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -33790,7 +33790,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 99214326}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -34999,7 +34999,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 449190026}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -35356,7 +35356,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1202891461}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -35631,7 +35631,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 2023924842}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -36206,7 +36206,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 788325165}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -36824,7 +36824,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 700896151}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -37195,7 +37195,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1980638284}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -37667,7 +37667,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 606082918}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -38165,7 +38165,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 2104186602}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -38648,7 +38648,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1066943434}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -39050,7 +39050,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 125567731}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -40105,7 +40105,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 2534134}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -40524,7 +40524,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 234610521}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -41039,7 +41039,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1890289258}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -41457,7 +41457,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1477398350}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -42623,7 +42623,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1417003441}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -44229,7 +44229,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 87903634}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -44978,7 +44978,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 855457876}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -45394,7 +45394,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 973717708}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -46429,7 +46429,7 @@ MonoBehaviour:
   vida: 200
   controladorGolpe: {fileID: 77843066}
   radioGolpe: 2
-  danoAtaque: 15
+  danoAtaque: 20
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -46969,7 +46969,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1832609489}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -48799,7 +48799,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1783172671}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -50011,7 +50011,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 497325217}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -50473,7 +50473,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 816366554}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -50870,7 +50870,7 @@ MonoBehaviour:
   vida: 100
   controladorGolpe: {fileID: 1705891763}
   radioGolpe: 1.5
-  danoAtaque: 8
+  danoAtaque: 20
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -51514,7 +51514,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1577657538}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -56234,7 +56234,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1032233415}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -56768,7 +56768,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1380166348}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -58767,7 +58767,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1008455714}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -59295,7 +59295,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 457128919}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -59711,7 +59711,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 208997226}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -60099,7 +60099,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 291968819}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -61873,7 +61873,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1657634121}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -63192,7 +63192,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1523735635}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -63535,7 +63535,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 941062577}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -64581,7 +64581,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 284724434}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -65314,7 +65314,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 255469472}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -65924,7 +65924,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 726298568}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -67457,7 +67457,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1750617022}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -67855,7 +67855,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1460273974}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -69004,7 +69004,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 738028495}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -69338,7 +69338,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 2046753607}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -69867,7 +69867,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 757296504}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -70942,7 +70942,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 1126738195}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -71703,7 +71703,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 587796667}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -72182,7 +72182,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 1005110267}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -72782,7 +72782,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 221334972}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -74782,7 +74782,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 616752359}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -75089,7 +75089,7 @@ MonoBehaviour:
   vida: 20
   controladorGolpe: {fileID: 1665879860}
   radioGolpe: 1
-  danoAtaque: 5
+  danoAtaque: 9
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
@@ -99248,7 +99248,7 @@ MonoBehaviour:
   vida: 40
   controladorGolpe: {fileID: 650494017}
   radioGolpe: 0.6
-  danoAtaque: 7
+  danoAtaque: 12
   cooldownAtaque: 0.5
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 74582475719a6ad47a45f6872a2c9ace, type: 3}
@@ -100532,7 +100532,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 171519810}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -100857,7 +100857,7 @@ MonoBehaviour:
   vida: 60
   controladorGolpe: {fileID: 169898397}
   radioGolpe: 0.7
-  danoAtaque: 10
+  danoAtaque: 15
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}

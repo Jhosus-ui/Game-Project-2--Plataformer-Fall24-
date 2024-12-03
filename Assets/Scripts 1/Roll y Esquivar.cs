@@ -101,9 +101,11 @@ public class PlayerDodgeRoll : MonoBehaviour
     private void StopRoll()
     {
         isRolling = false;
-        rb.velocity = Vector2.zero; // Detener movimiento
-        playerMovement?.ActivarControles(); // Reactivar controles del movimiento
+        rb.velocity = Vector2.zero;
+        playerMovement?.ActivarControles(); // Reactivar controles
+        GetComponent<PlayerHealth>()?.DesactivarInvulnerabilidad(); // Desactivar invulnerabilidad
     }
+
 
     private void StopDodge()
     {
