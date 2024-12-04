@@ -345,17 +345,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 8208566}
   animator: {fileID: 8208570}
 --- !u!114 &8208568
@@ -1285,17 +1286,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 6
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 8
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 46232872}
   animator: {fileID: 46232874}
 --- !u!114 &46232871
@@ -1688,17 +1690,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 51903756}
   animator: {fileID: 51903760}
 --- !u!114 &51903758
@@ -1986,17 +1989,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 6
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 55543290}
   animator: {fileID: 55543292}
 --- !u!114 &55543289
@@ -3233,17 +3237,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 125581312}
   animator: {fileID: 125581316}
 --- !u!114 &125581314
@@ -3831,17 +3836,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 2
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 187613989}
   animator: {fileID: 187613993}
 --- !u!114 &187613991
@@ -10534,17 +10540,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 198972464}
   animator: {fileID: 198972468}
 --- !u!114 &198972466
@@ -19871,17 +19878,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 231946618}
   animator: {fileID: 231946620}
 --- !u!114 &231946617
@@ -20336,17 +20344,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 248597226}
   animator: {fileID: 248597230}
 --- !u!114 &248597228
@@ -22205,17 +22214,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 303882902}
   animator: {fileID: 303882904}
 --- !u!114 &303882901
@@ -23075,17 +23085,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 336276918}
   animator: {fileID: 336276920}
 --- !u!114 &336276917
@@ -23473,17 +23484,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 356154252}
   animator: {fileID: 356154256}
 --- !u!114 &356154254
@@ -24429,17 +24441,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 390108214}
   animator: {fileID: 390108216}
 --- !u!114 &390108213
@@ -25015,17 +25028,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 401937465}
   animator: {fileID: 401937467}
 --- !u!114 &401937464
@@ -25999,17 +26013,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 451804982}
   animator: {fileID: 451804986}
 --- !u!114 &451804984
@@ -27114,17 +27129,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 513116455}
   animator: {fileID: 513116459}
 --- !u!114 &513116457
@@ -27612,17 +27628,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 526618863}
   animator: {fileID: 526618867}
 --- !u!114 &526618865
@@ -27978,17 +27995,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 6
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 8
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 530977211}
   animator: {fileID: 530977213}
 --- !u!114 &530977210
@@ -29475,17 +29493,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 629906807}
   animator: {fileID: 629906811}
 --- !u!114 &629906809
@@ -30857,17 +30876,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 25, y: 2}
+  offsetBusqueda: {x: -9, y: 0}
+  areaMovimiento: {x: 26, y: 3}
+  offsetMovimiento: {x: -10, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 681031530}
   animator: {fileID: 681031532}
 --- !u!114 &681031529
@@ -31361,17 +31381,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 2
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 2
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 699907127}
   animator: {fileID: 699907131}
 --- !u!114 &699907129
@@ -32144,17 +32165,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 718011878}
   animator: {fileID: 718011880}
 --- !u!114 &718011877
@@ -33077,17 +33099,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 778790555}
   animator: {fileID: 778790557}
 --- !u!114 &778790554
@@ -33762,17 +33785,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 791451867}
   animator: {fileID: 791451869}
 --- !u!114 &791451866
@@ -35603,17 +35627,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 850905942}
   animator: {fileID: 850905944}
 --- !u!114 &850905941
@@ -36178,17 +36203,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 2
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 2
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 870670140}
   animator: {fileID: 870670142}
 --- !u!114 &870670139
@@ -36796,17 +36822,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 879873667}
   animator: {fileID: 879873671}
 --- !u!114 &879873669
@@ -37167,17 +37194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 887578096}
   animator: {fileID: 887578100}
 --- !u!114 &887578098
@@ -37639,17 +37667,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 889009236}
   animator: {fileID: 889009240}
 --- !u!114 &889009238
@@ -38620,17 +38649,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 6
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 922319183}
   animator: {fileID: 922319185}
 --- !u!114 &922319182
@@ -40077,17 +40107,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 974741954}
   animator: {fileID: 974741958}
 --- !u!114 &974741956
@@ -40496,17 +40527,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 982985865}
   animator: {fileID: 982985867}
 --- !u!114 &982985864
@@ -41011,17 +41043,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 998916751}
   animator: {fileID: 998916753}
 --- !u!114 &998916750
@@ -41429,17 +41462,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1011970383}
   animator: {fileID: 1011970385}
 --- !u!114 &1011970382
@@ -42595,17 +42629,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1055353688}
   animator: {fileID: 1055353692}
 --- !u!114 &1055353690
@@ -44201,17 +44236,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1111234922}
   animator: {fileID: 1111234926}
 --- !u!114 &1111234924
@@ -45366,17 +45402,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1133546182}
   animator: {fileID: 1133546186}
 --- !u!114 &1133546184
@@ -46401,17 +46438,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 9
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4
-  distanciaMaxima: 9
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 1
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1181255527}
   animator: {fileID: 1181255529}
 --- !u!114 &1181255526
@@ -46941,17 +46979,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 6
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1198649906}
   animator: {fileID: 1198649908}
 --- !u!114 &1198649905
@@ -48771,17 +48810,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1270534687}
   animator: {fileID: 1270534691}
 --- !u!114 &1270534689
@@ -49983,17 +50023,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1343183903}
   animator: {fileID: 1343183905}
 --- !u!114 &1343183902
@@ -51486,17 +51527,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1382582541}
   animator: {fileID: 1382582543}
 --- !u!114 &1382582540
@@ -56206,17 +56248,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1447452572}
   animator: {fileID: 1447452574}
 --- !u!114 &1447452571
@@ -56740,17 +56783,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 2
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1455506457}
   animator: {fileID: 1455506461}
 --- !u!114 &1455506459
@@ -59683,17 +59727,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1558803908}
   animator: {fileID: 1558803912}
 --- !u!114 &1558803910
@@ -60071,17 +60116,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 6
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1561807115}
   animator: {fileID: 1561807117}
 --- !u!114 &1561807114
@@ -61845,17 +61891,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1630168336}
   animator: {fileID: 1630168340}
 --- !u!114 &1630168338
@@ -63507,17 +63554,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1705634100}
   animator: {fileID: 1705634102}
 --- !u!114 &1705634099
@@ -64553,17 +64601,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1727987983}
   animator: {fileID: 1727987985}
 --- !u!114 &1727987982
@@ -65286,17 +65335,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1763654237}
   animator: {fileID: 1763654241}
 --- !u!114 &1763654239
@@ -67429,17 +67479,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1806217531}
   animator: {fileID: 1806217533}
 --- !u!114 &1806217530
@@ -67827,17 +67878,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1808352107}
   animator: {fileID: 1808352111}
 --- !u!114 &1808352109
@@ -68976,17 +69028,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 5
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1834859278}
   animator: {fileID: 1834859282}
 --- !u!114 &1834859280
@@ -69310,17 +69363,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 3
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 3
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1844602250}
   animator: {fileID: 1844602252}
 --- !u!114 &1844602249
@@ -69839,17 +69893,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 4.8
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1860327497}
   animator: {fileID: 1860327499}
 --- !u!114 &1860327496
@@ -70914,17 +70969,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1908851965}
   animator: {fileID: 1908851969}
 --- !u!114 &1908851967
@@ -71881,17 +71937,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 9
+  areaBusqueda: {x: 11, y: 2.5}
+  offsetBusqueda: {x: 2, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 10
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1937823465}
   animator: {fileID: 1937823462}
 --- !u!61 &1937823467
@@ -72154,17 +72211,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1942009391}
   animator: {fileID: 1942009393}
 --- !u!114 &1942009390
@@ -72754,17 +72812,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 1955896088}
   animator: {fileID: 1955896092}
 --- !u!114 &1955896090
@@ -74754,17 +74813,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 2034238358}
   animator: {fileID: 2034238362}
 --- !u!114 &2034238360
@@ -99220,17 +99280,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 2.7
-  distanciaMaxima: 7
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.5
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 2063126909}
   animator: {fileID: 2063126913}
 --- !u!114 &2063126911
@@ -100504,17 +100565,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 5
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 2135184618}
   animator: {fileID: 2135184620}
 --- !u!114 &2135184617
@@ -100829,17 +100891,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radioBusqueda: 4
+  areaBusqueda: {x: 5, y: 2}
+  offsetBusqueda: {x: 0, y: 0}
+  areaMovimiento: {x: 10, y: 4}
+  offsetMovimiento: {x: 0, y: 0}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
   transformJugador: {fileID: 0}
   velocidadMovimiento: 3
-  distanciaMaxima: 4
-  puntoInicial: {x: 0, y: 0, z: 0}
   distanciaMinima: 0.6
-  estadoActual: 0
   mirandoDerecha: 0
+  estadoActual: 0
   rb2D: {fileID: 2139808149}
   animator: {fileID: 2139808151}
 --- !u!114 &2139808148
