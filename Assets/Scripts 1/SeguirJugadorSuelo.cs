@@ -62,22 +62,25 @@ public class SeguirJugadorSuelo : MonoBehaviour
         }
     }
 
-    private void EstadoEsperando()
-    {
-        // Usar OverlapBox para detectar al jugador en el área de búsqueda
-        Collider2D jugadorCollider = Physics2D.OverlapBox(
-            (Vector2)transform.position + offsetBusqueda,
-            areaBusqueda,
-            0f,
-            capaJugador
-        );
+   private void EstadoEsperando()
+{
+    Collider2D jugadorCollider = Physics2D.OverlapBox(
+        (Vector2)transform.position + offsetBusqueda,
+        areaBusqueda,
+        0f,
+        capaJugador
+    );
 
-        if (jugadorCollider)
-        {
-            transformJugador = jugadorCollider.transform;
-            estadoActual = EstadosMovimiento.Siguiendo;
-        }
+    if (jugadorCollider)
+    {
+        // Verifica si el jugador está dentro de un rango razonable en el eje Y
+        float diferenciaAltura = Mathf.Abs(jugadorCollider.transform.position.y - transform.position.y);
+        if (diferenciaAltura > areaBusqueda.y / 2) return; // Fuera del rango en altura
+
+        transformJugador = jugadorCollider.transform;
+        estadoActual = EstadosMovimiento.Siguiendo;
     }
+}
 
     private void EstadoSiguiendo()
     {
@@ -89,7 +92,26 @@ public class SeguirJugadorSuelo : MonoBehaviour
             return;
         }
 
-        // Si está dentro de la distancia mínima, detenerse
+        // Verificar si el jugador está fuera del rango vertical del área de movimiento
+        float diferenciaY = Mathf.Abs(transformJugador.position.y - puntoInicial.y);
+        if (diferenciaY > areaMovimiento.y / 2) // Si está fuera del rango en Y
+        {
+            estadoActual = EstadosMovimiento.Volviendo;
+            transformJugador = null;
+            return;
+        }
+
+        // Verificar si el jugador está directamente encima del enemigo en Y
+        float diferenciaVertical = Mathf.Abs(transformJugador.position.y - transform.position.y);
+        if (diferenciaVertical > 0.1f && diferenciaVertical < areaMovimiento.y / 2 && // Dentro del área de movimiento
+            Mathf.Abs(transformJugador.position.x - transform.position.x) < 0.5f)    // Posición similar en X
+        {
+            rb2D.velocity = Vector2.zero; // Detener el movimiento
+            animator.SetBool("Corriendo", false); // Detener la animación
+            return; // Salir para evitar movimientos alocados
+        }
+
+        // Si está dentro del área de movimiento, continuar persiguiendo
         if (Vector2.Distance(transform.position, transformJugador.position) <= distanciaMinima)
         {
             rb2D.velocity = Vector2.zero;
@@ -97,7 +119,6 @@ public class SeguirJugadorSuelo : MonoBehaviour
             return; // Salir de la lógica de seguimiento
         }
 
-        // Mover hacia el jugador
         if (transform.position.x < transformJugador.position.x)
         {
             rb2D.velocity = new Vector2(velocidadMovimiento, rb2D.velocity.y);
@@ -117,6 +138,9 @@ public class SeguirJugadorSuelo : MonoBehaviour
             transformJugador = null;
         }
     }
+
+
+
 
     private void EstadoVolviendo()
     {
