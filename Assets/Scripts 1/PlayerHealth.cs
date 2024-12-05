@@ -65,7 +65,7 @@ public class PlayerHealth : MonoBehaviour
             }
             Debug.Log($"Vida actual después de curar: {vidaActual}");
 
-            // Opcional: puedes agregar efectos visuales o sonoros aquí
+            // Opcional:  agregar efectos visuales o sonoros aquí
         }
     }
 
