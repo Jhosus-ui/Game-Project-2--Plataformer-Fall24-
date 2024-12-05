@@ -54,6 +54,21 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void Curar(float cantidad)
+    {
+        if (!estaMuerto) // Solo curar si el jugador no está muerto
+        {
+            vidaActual += cantidad;
+            if (vidaActual > vidaMaxima)
+            {
+                vidaActual = vidaMaxima; // Asegurarse de no exceder la vida máxima
+            }
+            Debug.Log($"Vida actual después de curar: {vidaActual}");
+
+            // Opcional: puedes agregar efectos visuales o sonoros aquí
+        }
+    }
+
     private void Muerte()
     {
         estaMuerto = true;
@@ -77,20 +92,10 @@ public class PlayerHealth : MonoBehaviour
             fadingObject.DetenerMusica(); // Detener la música de ambientación
         }
 
-        if (playerMovement != null)
-        {
-            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
-        }
-
         Combat combat = GetComponent<Combat>();
         if (combat != null)
         {
             combat.DesactivarCombate();
-        }
-
-        if (playerMovement != null)
-        {
-            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
         }
 
         Invoke(nameof(GameOver), tiempoGameOver); // Invocar Game Over después de un tiempo
@@ -141,6 +146,6 @@ public class PlayerHealth : MonoBehaviour
 
     public float GetVidaMaxima()
     {
-        return vidaMaxima;
+        return vidaMaxima; // Retorna la vida máxima
     }
 }
