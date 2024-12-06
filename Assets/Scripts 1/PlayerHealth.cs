@@ -38,6 +38,13 @@ public class PlayerHealth : MonoBehaviour
 
         vidaActual -= dano;
 
+        // Mostrar el efecto de golpe
+        HitEffect hitEffect = GetComponent<HitEffect>();
+        if (hitEffect != null)
+        {
+            hitEffect.MostrarEfectoGolpe();
+        }
+
         // Reproducir sonido de daño sin retrasos
         if (sonidoDano != null && audioSource != null)
         {
@@ -53,6 +60,7 @@ public class PlayerHealth : MonoBehaviour
             Muerte();
         }
     }
+
 
     public void Curar(float cantidad)
     {

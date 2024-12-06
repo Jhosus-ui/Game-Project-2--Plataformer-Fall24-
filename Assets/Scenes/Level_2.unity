@@ -345,10 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 25, y: 2.5}
+  offsetBusqueda: {x: 3, y: 0}
+  areaMovimiento: {x: 27, y: 7.5}
+  offsetMovimiento: {x: 3, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -1498,13 +1498,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1736,10 +1736,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 15, y: 2.5}
+  offsetBusqueda: {x: -0.5, y: 0}
+  areaMovimiento: {x: 17, y: 7.5}
+  offsetMovimiento: {x: -0.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -2140,10 +2140,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 16, y: 2.5}
+  offsetBusqueda: {x: 6, y: 0}
+  areaMovimiento: {x: 18, y: 7.5}
+  offsetMovimiento: {x: 6, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -2439,10 +2439,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 22, y: 2.5}
+  offsetBusqueda: {x: -4.2, y: 0}
+  areaMovimiento: {x: 24, y: 7.5}
+  offsetMovimiento: {x: -4.2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -3256,13 +3256,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4520,10 +4520,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 6, y: 2.5}
+  offsetBusqueda: {x: -2, y: 0}
+  areaMovimiento: {x: 8, y: 7.5}
+  offsetMovimiento: {x: -2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -11180,10 +11180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 13, y: 2.5}
+  offsetBusqueda: {x: 3, y: 0}
+  areaMovimiento: {x: 15, y: 7.5}
+  offsetMovimiento: {x: 3, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -20483,13 +20483,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -20721,10 +20721,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 35, y: 2.5}
+  offsetBusqueda: {x: 12, y: 0}
+  areaMovimiento: {x: 37, y: 7.5}
+  offsetMovimiento: {x: 12, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -23306,7 +23306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 8, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
@@ -25018,6 +25018,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 690461100}
   - {fileID: 373771937}
   - {fileID: 1080904596}
   - {fileID: 1887197379}
@@ -25085,9 +25086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 6, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 8, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -25672,10 +25673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 7, y: 2.5}
+  offsetBusqueda: {x: -0.5, y: 0}
+  areaMovimiento: {x: 9, y: 7.5}
+  offsetMovimiento: {x: -0.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -26563,13 +26564,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -26976,13 +26977,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -27184,7 +27185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &430437325
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27870,9 +27871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 6, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 8, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -35003,7 +35004,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.6, y: 78.2, z: -10}
+  m_LocalPosition: {x: 6.36, y: 62.25, z: -10}
   m_LocalScale: {x: 1, y: 1.2611, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35090,13 +35091,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -35401,9 +35402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 16, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 18, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -35768,9 +35769,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 15, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 17, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -38831,8 +38832,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaBusqueda: {x: 25, y: 2.5}
   offsetBusqueda: {x: -9, y: 0}
-  areaMovimiento: {x: 26, y: 7.5}
-  offsetMovimiento: {x: -10, y: 2.5}
+  areaMovimiento: {x: 27, y: 7.5}
+  offsetMovimiento: {x: -9, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -39205,6 +39206,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &690461099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 690461100}
+  - component: {fileID: 690461102}
+  - component: {fileID: 690461101}
+  m_Layer: 0
+  m_Name: Dano
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &690461100
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690461099}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -13912.821}
+  m_LocalScale: {x: 154.28572, y: 154.28572, z: 154.28572}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 388674709}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.6958, y: -8.2283}
+  m_SizeDelta: {x: 24.854, y: 14.107}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &690461101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690461099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.46540874, g: 0.44930968, b: 0.44930968, a: 0.4117647}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e057282fd1ab91048800d4fe33c0d156, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &690461102
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690461099}
+  m_CullTransparentMesh: 1
 --- !u!1 &698174803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 149748185615647587, guid: 8b0931af4676bba4491d85c615d15d9b, type: 3}
@@ -39746,10 +39822,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
+  areaBusqueda: {x: 8, y: 2.5}
+  offsetBusqueda: {x: -0.5, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  offsetMovimiento: {x: -0.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -41176,10 +41252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 15, y: 2.5}
+  offsetBusqueda: {x: 0.5, y: 0}
+  areaMovimiento: {x: 17, y: 7.5}
+  offsetMovimiento: {x: 0.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -41812,7 +41888,7 @@ Transform:
   m_GameObject: {fileID: 791451863}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.16, y: 55.12, z: 0.061601073}
+  m_LocalPosition: {x: 13.25, y: 54.71, z: 0.061601073}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -41831,10 +41907,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 10, y: 2.5}
+  offsetBusqueda: {x: 0.5, y: 0}
+  areaMovimiento: {x: 12, y: 7.5}
+  offsetMovimiento: {x: 0.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -42330,6 +42406,7 @@ GameObject:
   - component: {fileID: 815158178}
   - component: {fileID: 815158179}
   - component: {fileID: 815158180}
+  - component: {fileID: 815158181}
   m_Layer: 6
   m_Name: Caballero
   m_TagString: Player
@@ -42443,7 +42520,7 @@ Transform:
   m_GameObject: {fileID: 815158167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.6, y: 78.2, z: 0}
+  m_LocalPosition: {x: 6.36, y: 62.25, z: 0}
   m_LocalScale: {x: 0.44443622, y: 0.46221882, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -42714,6 +42791,20 @@ MonoBehaviour:
   regenRate: 20
   delayBeforeRegen: 0.7
   staminaSlider: {fileID: 373771938}
+--- !u!114 &815158181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815158167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57ef8cbc3d239c04ea61a3ec7e38052f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  golpeImagen: {fileID: 690461101}
+  duracionEfecto: 0.3
 --- !u!1 &816366553
 GameObject:
   m_ObjectHideFlags: 0
@@ -43674,9 +43765,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
+  offsetBusqueda: {x: 2, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  offsetMovimiento: {x: 2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -44791,10 +44882,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 35, y: 2.5}
+  offsetBusqueda: {x: -1.5, y: 0}
+  areaMovimiento: {x: 37, y: 7.5}
+  offsetMovimiento: {x: -1.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -45636,10 +45727,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 22, y: 2.5}
+  offsetBusqueda: {x: 3.5, y: 0}
+  areaMovimiento: {x: 24, y: 7.5}
+  offsetMovimiento: {x: 3.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -46797,7 +46888,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &911786153
 Transform:
   m_ObjectHideFlags: 0
@@ -46867,10 +46958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 22, y: 2.5}
+  offsetBusqueda: {x: 6, y: 0}
+  areaMovimiento: {x: 24, y: 7.5}
+  offsetMovimiento: {x: 6, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -48259,13 +48350,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -49055,9 +49146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 7, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 9, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -49475,10 +49566,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
+  areaBusqueda: {x: 8, y: 2.5}
+  offsetBusqueda: {x: 3, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  offsetMovimiento: {x: 3, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -49987,13 +50078,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -50225,10 +50316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 12, y: 2.5}
+  offsetBusqueda: {x: 1, y: 0}
+  areaMovimiento: {x: 14, y: 7.5}
+  offsetMovimiento: {x: 1, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -50509,6 +50600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 999035827}
+  - component: {fileID: 999035828}
   m_Layer: 0
   m_Name: Curationes
   m_TagString: Untagged
@@ -50552,6 +50644,102 @@ Transform:
   - {fileID: 1222838817}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &999035828
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999035826}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1005110266
 GameObject:
   m_ObjectHideFlags: 0
@@ -51832,10 +52020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 10, y: 2.5}
+  offsetBusqueda: {x: -2, y: 0}
+  areaMovimiento: {x: 12, y: 7.5}
+  offsetMovimiento: {x: -2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -52519,7 +52707,7 @@ Transform:
   m_GameObject: {fileID: 1071261489}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.6, y: 78.2, z: -10}
+  m_LocalPosition: {x: 6.36, y: 62.25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53408,13 +53596,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -55890,9 +56078,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 13, y: 6}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 16, y: 10}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -55919,7 +56107,7 @@ MonoBehaviour:
   vida: 200
   controladorGolpe: {fileID: 77843066}
   radioGolpe: 2
-  danoAtaque: 20
+  danoAtaque: 25
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -57204,13 +57392,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -58569,10 +58757,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 13, y: 2.5}
+  offsetBusqueda: {x: -3, y: 0}
+  areaMovimiento: {x: 15, y: 7.5}
+  offsetMovimiento: {x: -3, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -58965,13 +59153,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -60265,10 +60453,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
+  areaBusqueda: {x: 8, y: 2.5}
+  offsetBusqueda: {x: 2, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  offsetMovimiento: {x: 2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -61740,7 +61928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   areaBusqueda: {x: 5, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 7, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -62630,13 +62818,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -66693,9 +66881,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 7, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 9, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -69151,7 +69339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1494.9, y: -28.84497}
+  m_AnchoredPosition: {x: -1494.9, y: -28.84961}
   m_SizeDelta: {x: -3661.71, y: -2002.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1541798770
@@ -69239,13 +69427,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -70020,10 +70208,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 13, y: 2.5}
+  offsetBusqueda: {x: -1, y: 0}
+  areaMovimiento: {x: 15, y: 7.5}
+  offsetMovimiento: {x: -1, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -71036,13 +71224,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -72029,7 +72217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 8, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
   areaMovimiento: {x: 10, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
@@ -73220,7 +73408,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1682975765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73970,10 +74158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 18, y: 2.5}
+  offsetBusqueda: {x: -4.5, y: 0}
+  areaMovimiento: {x: 20, y: 7.5}
+  offsetMovimiento: {x: -4.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -75017,10 +75205,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 15, y: 2.5}
+  offsetBusqueda: {x: -3, y: 0}
+  areaMovimiento: {x: 17, y: 7.5}
+  offsetMovimiento: {x: -3, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -75573,13 +75761,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -75986,9 +76174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  offsetBusqueda: {x: 0.4, y: 0}
+  areaMovimiento: {x: 7, y: 7.5}
+  offsetMovimiento: {x: 0.4, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -78129,10 +78317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 15, y: 2.5}
+  offsetBusqueda: {x: -5, y: 0}
+  areaMovimiento: {x: 17, y: 7.5}
+  offsetMovimiento: {x: -5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -78526,13 +78714,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -79588,10 +79776,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 10, y: 2.5}
+  offsetBusqueda: {x: 2, y: 0}
+  areaMovimiento: {x: 12, y: 7.5}
+  offsetMovimiento: {x: 2, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -80127,10 +80315,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 22, y: 2.5}
+  offsetBusqueda: {x: 3.5, y: 0}
+  areaMovimiento: {x: 24, y: 7.5}
+  offsetMovimiento: {x: 3.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -81201,13 +81389,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -83841,10 +84029,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 10, y: 2.5}
+  offsetBusqueda: {x: -1, y: 0}
+  areaMovimiento: {x: 12, y: 7.5}
+  offsetMovimiento: {x: -1.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -84442,10 +84630,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 12, y: 2.5}
+  offsetBusqueda: {x: 1.5, y: 0}
+  areaMovimiento: {x: 14, y: 7.5}
+  offsetMovimiento: {x: 1.5, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -86443,10 +86631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 18, y: 2.5}
+  offsetBusqueda: {x: 4, y: 0}
+  areaMovimiento: {x: 20, y: 7.5}
+  offsetMovimiento: {x: 4, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -110879,9 +111067,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
+  areaBusqueda: {x: 9, y: 2.5}
   offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
+  areaMovimiento: {x: 11, y: 7.5}
   offsetMovimiento: {x: 0, y: 2.5}
   capaJugador:
     serializedVersion: 2
@@ -111679,13 +111867,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -112157,13 +112345,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -112459,13 +112647,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -113192,10 +113380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a028738fc8235468be64ee73380f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  areaBusqueda: {x: 5, y: 2.5}
-  offsetBusqueda: {x: 0, y: 0}
-  areaMovimiento: {x: 10, y: 7.5}
-  offsetMovimiento: {x: 0, y: 2.5}
+  areaBusqueda: {x: 22, y: 2.5}
+  offsetBusqueda: {x: -4, y: 0}
+  areaMovimiento: {x: 24, y: 7.5}
+  offsetMovimiento: {x: -4, y: 2.5}
   capaJugador:
     serializedVersion: 2
     m_Bits: 64
@@ -113514,13 +113702,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.956
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
