@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     private PlayerMovement playerMovement; // Referencia al script PlayerMovement
     private AudioSource audioSource; // Fuente de audio para reproducir sonidos
     private bool estaMuerto = false; // Controla si el jugador ya murió
+    private bool esInvulnerable = false; // Controla si el jugador es invulnerable
 
     private void Start()
     {
@@ -33,14 +34,22 @@ public class PlayerHealth : MonoBehaviour
 
     public void TomarDano(float dano)
     {
-        if (estaMuerto) return; // Si ya está muerto, no hacer nada
+        if (estaMuerto || esInvulnerable) return; // Si ya está muerto o es invulnerable, no hacer nada
 
         vidaActual -= dano;
 
-        // Reproducir sonido de daño
+        // Mostrar el efecto de golpe
+        HitEffect hitEffect = GetComponent<HitEffect>();
+        if (hitEffect != null)
+        {
+            hitEffect.MostrarEfectoGolpe();
+        }
+
+        // Reproducir sonido de daño sin retrasos
         if (sonidoDano != null && audioSource != null)
         {
-            audioSource.PlayOneShot(sonidoDano);
+            audioSource.clip = sonidoDano;
+            audioSource.Play(); // Reproducir inmediatamente
         }
 
         Debug.Log("Jugador recibió daño. Vida restante: " + vidaActual);
@@ -49,6 +58,22 @@ public class PlayerHealth : MonoBehaviour
         {
             vidaActual = 0; // Asegurarse de que no sea negativa
             Muerte();
+        }
+    }
+
+
+    public void Curar(float cantidad)
+    {
+        if (!estaMuerto) // Solo curar si el jugador no está muerto
+        {
+            vidaActual += cantidad;
+            if (vidaActual > vidaMaxima)
+            {
+                vidaActual = vidaMaxima; // Asegurarse de no exceder la vida máxima
+            }
+            Debug.Log($"Vida actual después de curar: {vidaActual}");
+
+            // Opcional:  agregar efectos visuales o sonoros aquí
         }
     }
 
@@ -75,22 +100,11 @@ public class PlayerHealth : MonoBehaviour
             fadingObject.DetenerMusica(); // Detener la música de ambientación
         }
 
-        if (playerMovement != null)
-        {
-            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
-        }
-
         Combat combat = GetComponent<Combat>();
         if (combat != null)
         {
             combat.DesactivarCombate();
         }
-
-        if (playerMovement != null)
-        {
-            playerMovement.ActivarMuerte(); // Desactivar controles de movimiento
-        }
-
 
         Invoke(nameof(GameOver), tiempoGameOver); // Invocar Game Over después de un tiempo
     }
@@ -116,6 +130,18 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void ActivarInvulnerabilidad()
+    {
+        esInvulnerable = true; // Activa la invulnerabilidad
+        Debug.Log("Invulnerabilidad activada.");
+    }
+
+    public void DesactivarInvulnerabilidad()
+    {
+        esInvulnerable = false; // Desactiva la invulnerabilidad
+        Debug.Log("Invulnerabilidad desactivada.");
+    }
+
     public bool IsDead()
     {
         return estaMuerto; // Retorna el estado de muerte
@@ -128,6 +154,6 @@ public class PlayerHealth : MonoBehaviour
 
     public float GetVidaMaxima()
     {
-        return vidaMaxima;
+        return vidaMaxima; // Retorna la vida máxima
     }
 }

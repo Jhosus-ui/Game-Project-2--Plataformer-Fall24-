@@ -1,24 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SeguirJugadorSuelo : MonoBehaviour
 {
-    public float radioBusqueda;
+    [Header("Área de Búsqueda")]
+    public Vector2 areaBusqueda = new Vector2(5f, 2f); // Dimensiones del área de búsqueda
+    public Vector2 offsetBusqueda = Vector2.zero; // Offset del área de búsqueda desde el enemigo
+
+    [Header("Área de Movimiento")]
+    public Vector2 areaMovimiento = new Vector2(10f, 4f); // Dimensiones del área de movimiento permitido
+    public Vector2 offsetMovimiento = Vector2.zero; // Offset del área de movimiento
+
     public LayerMask capaJugador;
     public Transform transformJugador;
-    public float velocidadMovimiento;
-    public float distanciaMaxima;
-    public Vector3 puntoInicial;
+    public float velocidadMovimiento = 2f;
     public float distanciaMinima = 1f; // Distancia mínima desde el jugador para detenerse
 
-    public EstadosMovimiento estadoActual;
-
+    private Vector3 puntoInicial;
     public bool mirandoDerecha;
+    public EstadosMovimiento estadoActual;
 
     public Rigidbody2D rb2D;
     public Animator animator;
-
     private Enemigo enemigo; // Referencia al script Enemigo
 
     public enum EstadosMovimiento
@@ -30,14 +32,14 @@ public class SeguirJugadorSuelo : MonoBehaviour
 
     private void Start()
     {
-        puntoInicial = transform.position;
-        enemigo = GetComponent<Enemigo>(); // Obtener el componente Enemigo
+        puntoInicial = transform.position; // Guardar la posición inicial del enemigo
+        enemigo = GetComponent<Enemigo>(); // Obtener referencia al script Enemigo
     }
 
     private void Update()
     {
         // Detener movimiento si la vida es menor o igual a 0
-        if (enemigo.Vida <= 0) // Accede a la propiedad o método Vida en el script Enemigo
+        if (enemigo != null && enemigo.Vida <= 0)
         {
             estadoActual = EstadosMovimiento.Esperando; // Cambiar estado a Esperando
             rb2D.velocity = Vector2.zero; // Detener movimiento
@@ -45,7 +47,7 @@ public class SeguirJugadorSuelo : MonoBehaviour
             return; // Detener ejecución de Update
         }
 
-        // Lógica del estado actual
+        // Cambiar estados según la lógica
         switch (estadoActual)
         {
             case EstadosMovimiento.Esperando:
@@ -60,16 +62,25 @@ public class SeguirJugadorSuelo : MonoBehaviour
         }
     }
 
-    private void EstadoEsperando()
-    {
-        Collider2D jugadorCollider = Physics2D.OverlapCircle(transform.position, radioBusqueda, capaJugador);
+   private void EstadoEsperando()
+{
+    Collider2D jugadorCollider = Physics2D.OverlapBox(
+        (Vector2)transform.position + offsetBusqueda,
+        areaBusqueda,
+        0f,
+        capaJugador
+    );
 
-        if (jugadorCollider)
-        {
-            transformJugador = jugadorCollider.transform;
-            estadoActual = EstadosMovimiento.Siguiendo;
-        }
+    if (jugadorCollider)
+    {
+        // Verifica si el jugador está dentro de un rango razonable en el eje Y
+        float diferenciaAltura = Mathf.Abs(jugadorCollider.transform.position.y - transform.position.y);
+        if (diferenciaAltura > areaBusqueda.y / 2) return; // Fuera del rango en altura
+
+        transformJugador = jugadorCollider.transform;
+        estadoActual = EstadosMovimiento.Siguiendo;
     }
+}
 
     private void EstadoSiguiendo()
     {
@@ -81,15 +92,33 @@ public class SeguirJugadorSuelo : MonoBehaviour
             return;
         }
 
-        // Si está dentro de la distancia mínima, detenerse
+        // Verificar si el jugador está fuera del rango vertical del área de movimiento
+        float diferenciaY = Mathf.Abs(transformJugador.position.y - puntoInicial.y);
+        if (diferenciaY > areaMovimiento.y / 2) // Si está fuera del rango en Y
+        {
+            estadoActual = EstadosMovimiento.Volviendo;
+            transformJugador = null;
+            return;
+        }
+
+        // Verificar si el jugador está directamente encima del enemigo en Y
+        float diferenciaVertical = Mathf.Abs(transformJugador.position.y - transform.position.y);
+        if (diferenciaVertical > 0.1f && diferenciaVertical < areaMovimiento.y / 2 && // Dentro del área de movimiento
+            Mathf.Abs(transformJugador.position.x - transform.position.x) < 0.5f)    // Posición similar en X
+        {
+            rb2D.velocity = Vector2.zero; // Detener el movimiento
+            animator.SetBool("Corriendo", false); // Detener la animación
+            return; // Salir para evitar movimientos alocados
+        }
+
+        // Si está dentro del área de movimiento, continuar persiguiendo
         if (Vector2.Distance(transform.position, transformJugador.position) <= distanciaMinima)
         {
             rb2D.velocity = Vector2.zero;
-            animator.SetBool("Corriendo", false); // Detener la animación de correr
+            animator.SetBool("Corriendo", false);
             return; // Salir de la lógica de seguimiento
         }
 
-        // Mover hacia el jugador
         if (transform.position.x < transformJugador.position.x)
         {
             rb2D.velocity = new Vector2(velocidadMovimiento, rb2D.velocity.y);
@@ -101,14 +130,17 @@ public class SeguirJugadorSuelo : MonoBehaviour
 
         GirarAObjetivo(transformJugador.position);
 
-        // Cambiar estado a Volviendo si se excede la distancia máxima
-        if (Vector2.Distance(transform.position, puntoInicial) > distanciaMaxima ||
-            Vector2.Distance(transform.position, transformJugador.position) > distanciaMaxima)
+        // Cambiar estado a Volviendo si el jugador está fuera del área de movimiento
+        Vector3 posicionMovimiento = puntoInicial + (Vector3)offsetMovimiento;
+        if (!DentroDeAreaMovimiento(transform.position, posicionMovimiento, areaMovimiento))
         {
             estadoActual = EstadosMovimiento.Volviendo;
             transformJugador = null;
         }
     }
+
+
+
 
     private void EstadoVolviendo()
     {
@@ -151,12 +183,24 @@ public class SeguirJugadorSuelo : MonoBehaviour
         transform.eulerAngles = new Vector3(0, transform.eulerAngles.y + 180, 0);
     }
 
+    private bool DentroDeAreaMovimiento(Vector3 posicion, Vector3 centro, Vector2 dimensiones)
+    {
+        return posicion.x > centro.x - dimensiones.x / 2 &&
+               posicion.x < centro.x + dimensiones.x / 2 &&
+               posicion.y > centro.y - dimensiones.y / 2 &&
+               posicion.y < centro.y + dimensiones.y / 2;
+    }
+
     private void OnDrawGizmos()
     {
+        // Área de búsqueda
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, radioBusqueda);
+        Vector3 posicionBusqueda = transform.position + (Vector3)offsetBusqueda;
+        Gizmos.DrawWireCube(posicionBusqueda, new Vector3(areaBusqueda.x, areaBusqueda.y, 1f));
+
+        // Área de movimiento
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, distanciaMinima); // Representa la distancia mínima
-        Gizmos.DrawWireSphere(puntoInicial, distanciaMaxima);
+        Vector3 posicionMovimiento = puntoInicial + (Vector3)offsetMovimiento;
+        Gizmos.DrawWireCube(posicionMovimiento, new Vector3(areaMovimiento.x, areaMovimiento.y, 1f));
     }
 }

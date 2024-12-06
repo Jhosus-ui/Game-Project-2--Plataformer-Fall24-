@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,36 +10,35 @@ public class PlayerMovement : MonoBehaviour
     public float coyoteTime = 0.2f;
 
     private const float movementThreshold = 0.1f;
+    private const float fallThreshold = -0.5f;
+    private const float verticalThreshold = 0.1f;
 
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    private Combat combat;
 
     private bool isGrounded = false;
-    private bool hasJumpedFromGround = false;
-    private bool canSingleJumpOnFall = true;
+    private bool hasDoubleJumped = false;
     private bool isDead = false;
+    private bool isControlsActive = true; // Nuevo: Controla si los controles están activos
 
     private float coyoteTimeCounter;
 
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        combat = GetComponent<Combat>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (isDead) return;
+        if (isDead || !isControlsActive) return; // Desactivar controles si está muerto o deshabilitado
 
         HandleMovement();
         HandleJump();
         HandleFall();
-
-        combat?.SetIsJumping(!isGrounded);
+        UpdateAnimations();
     }
 
     private void HandleMovement()
@@ -57,11 +55,6 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(Mathf.Lerp(rb.velocity.x, 0, deceleration), rb.velocity.y);
         }
 
-        float xVelocity = Mathf.Abs(rb.velocity.x);
-        if (xVelocity < movementThreshold) xVelocity = 0;
-
-        animator.SetFloat("XVelocity", xVelocity);
-
         if (moveInput > 0) spriteRenderer.flipX = false;
         else if (moveInput < 0) spriteRenderer.flipX = true;
     }
@@ -71,8 +64,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             coyoteTimeCounter = coyoteTime;
-            hasJumpedFromGround = false;
-            canSingleJumpOnFall = true;
+            hasDoubleJumped = false;
         }
         else
         {
@@ -81,17 +73,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            if (isGrounded || (coyoteTimeCounter > 0f && canSingleJumpOnFall && !hasJumpedFromGround))
+            if (isGrounded || coyoteTimeCounter > 0f)
             {
                 Jump();
-                canSingleJumpOnFall = false;
-                animator.SetBool("isJumping", true);
             }
-            else if (!isGrounded && !hasJumpedFromGround)
+            else if (!isGrounded && !hasDoubleJumped)
             {
-                Jump();
-                hasJumpedFromGround = true;
-                animator.SetBool("isJumping", true);
+                DoubleJump();
             }
         }
     }
@@ -102,16 +90,59 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-
-        float yVelocity = rb.velocity.y;
-        if (Mathf.Abs(yVelocity) < movementThreshold) yVelocity = 0;
-
-        animator.SetFloat("YVelocity", yVelocity);
     }
 
     private void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        animator.SetTrigger("isJumping");
+    }
+
+    private void DoubleJump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        animator.SetTrigger("DoubleJump");
+        hasDoubleJumped = true;
+    }
+
+    private void UpdateAnimations()
+    {
+        float xVelocity = Mathf.Abs(rb.velocity.x);
+
+        if (xVelocity < movementThreshold)
+        {
+            xVelocity = 0f;
+        }
+
+        animator.SetFloat("XVelocity", xVelocity);
+
+        float yVelocity = rb.velocity.y;
+
+        if (Mathf.Abs(yVelocity) < verticalThreshold)
+        {
+            yVelocity = 0f;
+        }
+
+        animator.SetFloat("YVelocity", yVelocity);
+
+        if (!animator.GetBool("isFalling"))
+        {
+            if (yVelocity < fallThreshold && !isGrounded)
+            {
+                animator.SetBool("isFalling", true);
+                animator.SetBool("isJumping", false);
+            }
+            else if (isGrounded)
+            {
+                animator.SetBool("isFalling", false);
+                animator.SetBool("isJumping", false);
+            }
+            else if (yVelocity > 0 && !isGrounded)
+            {
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFalling", false);
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -119,15 +150,31 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            animator.SetBool("isJumping", false);
+            animator.SetBool("isGrounded", true);
+            animator.SetBool("isFalling", false);
+        }
+
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            foreach (ContactPoint2D contact in collision.contacts)
+            {
+                if (contact.normal.y > 0.5f)
+                {
+                    isGrounded = true;
+                    animator.SetBool("isGrounded", true);
+                    animator.SetBool("isFalling", false);
+                    return;
+                }
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             isGrounded = false;
+            animator.SetBool("isGrounded", false);
         }
     }
 
@@ -138,5 +185,17 @@ public class PlayerMovement : MonoBehaviour
         rb.isKinematic = true;
         rb.simulated = false;
         animator.SetTrigger("Muerte");
+    }
+
+    // Nuevo: Métodos para activar y desactivar controles
+    public void DesactivarControles()
+    {
+        isControlsActive = false;
+        rb.velocity = Vector2.zero; // Opcional: detener al jugador al desactivar controles
+    }
+
+    public void ActivarControles()
+    {
+        isControlsActive = true;
     }
 }
