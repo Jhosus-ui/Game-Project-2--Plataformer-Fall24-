@@ -56107,7 +56107,7 @@ MonoBehaviour:
   vida: 200
   controladorGolpe: {fileID: 77843066}
   radioGolpe: 2
-  danoAtaque: 25
+  danoAtaque: 19
   cooldownAtaque: 1
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 840070d4c36250c47ad6596e1f093be0, type: 3}
@@ -61341,7 +61341,7 @@ MonoBehaviour:
   vida: 100
   controladorGolpe: {fileID: 1705891763}
   radioGolpe: 1.5
-  danoAtaque: 20
+  danoAtaque: 18
   cooldownAtaque: 0.8
   frameAtaque: 0.7
   sonidoAtaque: {fileID: 8300000, guid: 33336d5c304b2f642a59cbeafd93ad51, type: 3}
